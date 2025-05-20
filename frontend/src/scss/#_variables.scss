@@ -1,0 +1,50 @@
+@import "colors";
+// @import "mixins";
+
+$fe-font-size: 1em; //=>12pt, 16px, 100%
+$layout_ratio: 0.4;
+//$layout-sidewidth: 200px;
+$fe-grid-size: 10px !default;
+
+
+// see https://bitsofco.de/the-new-system-font-stack/
+$fe-font-family: -apple-system,
+                 "BlinkMacSystemFont",
+                 "Segoe UI",
+                 "Roboto",
+                 "Oxygen",
+                 "Ubuntu",
+                 "Cantarell",
+                 "Open Sans",
+                 "Helvetica Neue",
+                 "Icons16", // support inline Palantir icons
+                 sans-serif !default;
+
+$fe-font-family-monospace: monospace !default;
+
+$fe-font-size-medium: $fe-font-size * 1.4 !default;
+$fe-font-size-large: $fe-font-size * 1.6 !default;
+$fe-font-size-small: $fe-font-size * 0.8 !default;
+
+
+$fe-intent-colors: (
+  "primary": $fe-intent-primary,
+  "success": $fe-intent-success,
+  "warning": $fe-intent-warning,
+  "danger" : $fe-intent-danger,
+) !default;
+
+$fe-intent-text-colors: (
+  "primary": $blue2,
+  "success": $green2,
+  "warning": $orange2,
+  "danger" : $red2,
+) !default;
+
+$fe-dark-intent-text-colors: (
+  "primary": $blue5,
+  "success": $green5,
+  "warning": $orange5,
+  "danger" : $red5,
+) !default;
+

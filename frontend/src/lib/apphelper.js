@@ -1,0 +1,800 @@
+import React from "react";
+import $ from "jquery";
+import {
+  resolutions,
+  frameTransitions,
+  // monthNames,
+  // clientRequestErrors,
+  allowFunctionAnimeProperty,
+  currencySymbols,
+} from "../iplays/constdata";
+
+
+class AppHelper {
+  appName = "iCast AppHelper";
+
+  detectOS = () => {
+    let OSName = "Unknown OS";
+    if (navigator.appVersion.indexOf("Win") != -1) OSName = "Windows";
+    if (navigator.appVersion.indexOf("Mac") != -1) OSName = "MacOS";
+    if (navigator.appVersion.indexOf("X11") != -1) OSName = "UNIX";
+    if (navigator.appVersion.indexOf("Linux") != -1) OSName = "Linux";
+
+    return OSName;
+  };
+
+  getUrlVars = () => {
+    var vars = {};
+    var parts = window.location.href.replace(
+      /[?&]+([^=&]+)=([^&]*)/gi,
+      function(m, key, value) {
+        vars[key] = value;
+      }
+    );
+    return vars;
+  };
+
+  graphImageObject = (dataImage) =>{
+    let imageObj = new Image();
+    imageObj.src = dataImage
+    return imageObj
+  }
+
+
+
+  fontLineHeightAjustOnLinux = (domStyle) => {
+    let lineHeight = 110;
+    const adjustMapping = { "MYuenHK-SemiBold": 1.08, "MYuenHK-Xbold": 1.15 };
+    // console.log("adjustMapping", domStyle);
+    if (typeof domStyle.lineHeight != "undefined")
+      lineHeight = this.getNumValue(domStyle.lineHeight);
+    if (
+      this.detectOS() != "Windows" &&
+      typeof adjustMapping[domStyle["fontFamily"]] != "undefined"
+    ) {
+      // console.log("adjustMapping", adjustMapping[domStyle['fontFamily']])
+      lineHeight = lineHeight * adjustMapping[domStyle["fontFamily"]];
+    }
+    return `${lineHeight}%`;
+  };
+
+  forceLogout = function () {
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
+    //localStorage.removeItem("org");
+    //localStorage.removeItem("expirationDate");
+    window.location = "/";
+  };
+
+  handleApiFailed = function (err) {
+    // console.log("handleApiFailed", err);
+    let ApiError = { detail: "Network Error"};
+    if (err.response) {
+        ApiError = {  apiUrl: err.response?.config?.url, 
+                      status: err.response?.status, 
+                      statusText: err.response?.statusText, 
+                      detail: err.response?.data?.detail }
+    } else if (err){
+      ApiError = { detail: err.toString() }
+    }
+    
+    return ApiError;
+  }
+  // handleApiFailed = function (err) {
+  //   if (err.response && typeof err.response.status !== "undefined") {
+  //     if (err.response.status == 401) {
+  //       this.forceLogout();
+  //     } else {
+  //       const error = clientRequestErrors[err.response.status];
+  //       let errorMsg = `Sorry! The server has response ${err.response.status} ${error} error for your action.`;
+  //       errorMsg += `\n\nError detail: " ${err.response.data.detail} " `;
+  //       errorMsg += `\n\nPlease to contact our support service!`;
+  //       alert(errorMsg);
+  //     }
+  //   } else {
+  //     console.log(err);
+  //   }
+  // };
+  
+  isNumeric = function (num) {
+    return !isNaN(num);
+  };
+
+  getNumValue = (propertyValue) => {
+    let numValue = 0;
+    if (propertyValue && propertyValue.match(/(\d+)/)[0]) {
+      numValue = Number(propertyValue.match(/(\d+)/)[0]);
+    }
+    return numValue;
+  };
+
+  applyAnimeTimeline = function (animeTimeline, animateTextId = null) {
+    let _animeTimeline = JSON.parse(JSON.stringify(animeTimeline)); //Deep Copy animeTimeline data
+    _animeTimeline.forEach((timelineKeyset, i) => {
+      Object.keys(timelineKeyset).forEach((propertyKey) => {
+        //change animateTextId for on display playing
+        if (animateTextId && propertyKey == "targets") {
+          _animeTimeline[i][propertyKey] = timelineKeyset[propertyKey].replace(
+            "#animateText",
+            `#animateText_${animateTextId}`
+          );
+        }
+        //change expression string to function
+        if (
+          allowFunctionAnimeProperty.includes(propertyKey) &&
+          typeof timelineKeyset[propertyKey] === "string"
+        ) {
+          const expression = timelineKeyset[propertyKey];
+          if (expression.indexOf("random") != -1) {
+            let max = 0;
+            let min = 10;
+            const minmax = expression
+              .substring(expression.indexOf("(") + 1, expression.indexOf(")"))
+              .split(",");
+            if (minmax.length == 2) {
+              min = Number(minmax[0]);
+              max = Number(minmax[1]);
+            }
+            _animeTimeline[i][propertyKey] = function (el, index) {
+              return Math.floor(Math.random() * (max - min + 1)) + min;
+            };
+          } else {
+            _animeTimeline[i][propertyKey] = function (el, index) {
+              return eval(expression);
+            };
+          }
+        }
+      });
+    });
+    // console.log("_animeTimeline:", _animeTimeline);
+    return _animeTimeline;
+  };
+
+  inputValueToNumber = function (inValue) {
+    let numValue = 0;
+    if (inValue) {
+      if (inValue.indexOf("px") > 0) {
+        numValue = Number(inValue.slice(0, inValue.indexOf("px")));
+      }
+      if (inValue.indexOf("%") > 0) {
+        // console.log("numValue", propValue.slice(0, propValue.indexOf("%")));
+        numValue = Number(inValue.slice(0, inValue.indexOf("%")));
+      }
+    }
+    return numValue;
+  };
+
+  getScaleWarpTransformStyle = function (originSize, warpupSize) {
+    let warpperStyle = {
+      position: "absolute",
+      transform: "scale(1)",
+      transformOrigin: "top left",
+    };
+    const w_width = originSize[0];
+    const w_height = originSize[1];
+
+    const widthScale = warpupSize[0] / w_width;
+    const heightScale = warpupSize[1] / w_height;
+
+    let wrapScale = widthScale;
+    if (widthScale > heightScale) wrapScale = heightScale;
+
+    warpperStyle.transform = `scale(${wrapScale})`;
+    return warpperStyle;
+  };
+
+  checkLicenseAllow = (applic, property, existing) => {
+    let allow = false;
+    if (property in applic) {
+      // let credit = (property == "iCast:User") ? 1 : 0;
+      let credit = 0;
+      const expiryGroup = applic[property];
+      Object.keys(expiryGroup).map((key) => {
+        credit = credit + expiryGroup[key];
+      });
+      //console.log(credit, existing.length)
+      if (property == "iCast:Display") {
+        allow = credit > existing ? true : false;
+      } else {
+        allow = credit > existing.length ? true : false;
+      }
+    }
+    return allow;
+  };
+
+  getLicenseCredit = (applic, property) => {
+    let credit = 0;
+    if (property in applic) {  
+      const expiryGroup = applic[property];
+      Object.keys(expiryGroup).map((key) => {
+        credit = credit + expiryGroup[key];
+      });
+    }
+    return credit;
+  };
+
+  maxLenString = function (inString, len = 36) {
+    if (inString.length > len) return inString.slice(0, len) + "...";
+    else return inString;
+  };
+
+  mediaTypeIconMaping = function (type) {
+    let icon = "grid-view";
+    if (type == "image") icon = "media";
+    if (type == "video") icon = "mobile-video";
+    if (type == "pdf") icon = "document";
+    if (type == "websource") icon = "globe-network";
+    if (type == "scrollmsgs") icon = "widget-button";
+    if (type == "framelayout") icon = "page-layout";
+    if (type == "webfont") icon = "font";
+    if (type == "clock")
+      icon = <i className="fa fa-clock-o" style={{ color: "#435869" }}></i>;
+    if (type == "animatetext")
+      icon = (
+        <i className="fa fa-play-circle-o" style={{ color: "#435869" }}></i>
+      );
+    if (type == "weather") icon = "flash";
+    return icon;
+  };
+
+  resolutionsOption = function () {
+    let options = (
+      <>
+        {resolutions.map((gruop, index) => (
+          <optgroup label={gruop.lable} key={index}>
+            {gruop.options.map((size, index) => (
+              <option value={size} key={index}>
+                {size[0]} x {size[1]}
+              </option>
+            ))}
+          </optgroup>
+        ))}
+      </>
+    );
+
+    return options;
+  };
+
+  transitionOptions = function () {
+    let options = (
+      <>
+        {frameTransitions.map((gruop, index) => (
+          <optgroup label={gruop.lable} key={index}>
+            {gruop.options.map((option, index) => (
+              <option value={option} key={index}>
+                {option}
+              </option>
+            ))}
+          </optgroup>
+        ))}
+      </>
+    );
+
+    return options;
+  };
+
+  toggleActiveSubmit = function (state, model) {
+    let hasChange = false;
+    Object.keys(state)
+      .filter((vkey) => !vkey.startsWith("_"))
+      .map((vkey) => {
+        if (state[vkey] !== model[vkey]) hasChange = true;
+      });
+    return hasChange;
+  };
+
+  mediaThumbSrc = function (content) {
+    let thumbs_src = content.substring(0, content.lastIndexOf("/"));
+    thumbs_src =
+      thumbs_src +
+      "/thumbs" +
+      content.substring(content.lastIndexOf("/"), content.length);
+    thumbs_src = thumbs_src.substring(0, thumbs_src.lastIndexOf(".")) + ".jpg";
+    return thumbs_src;
+  };
+
+  getCookie = function (name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== "") {
+      var cookies = document.cookie.split(";");
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = $.trim(cookies[i]);
+        if (cookie.substring(0, name.length + 1) === name + "=") {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  };
+
+  sqlToJsDate = function (sqlDate) {
+    //sqlDate in SQL DATETIME format ("yyyy-mm-dd")
+    var sqlDateSplit = sqlDate.split("-");
+    return new Date(sqlDateSplit[0], sqlDateSplit[1] - 1, sqlDateSplit[2]);
+  };
+
+  dateToSql = function (date) {
+    return date.toJSON().slice(0, 10);
+  };
+
+  dateSliceTime = function (date) {
+    return date.toString().slice(16, 24);
+  };
+
+  dateTimeToSql = function (date) {
+    return date.toJSON().slice(0, 19).replace("T", " ");
+  };
+
+  timeToSql = function (date) {
+    return date.toJSON().slice(10, 19);
+  };
+
+  sqlTimetoDate = function (sqlTime) {
+    return new Date(`2000-01-01T${sqlTime}`);
+  };
+
+  UTCDateToLocalDate = function (utcDate) {
+    const lcoalDate = new Date(utcDate);
+
+    return lcoalDate;
+  };
+  
+  /*
+  UTCDateToLocalDate = function (dateString) {
+    const d = new Date();
+    const utcDate = new Date(dateString);
+
+    let newDate = new Date(utcDate.getTime());
+
+    const offset = d.getTimezoneOffset() / 60;
+    const hours = utcDate.getHours();
+
+    newDate.setHours(hours - offset);
+
+    return newDate;
+  };
+  */
+  
+  LocalDatatimeShortFromat = function (localDate) {
+    return `${localDate.toISOString().slice(5, 10)} ${localDate.toString().slice(16, 24)}`
+  }
+
+  // function for get that how many month names in a datetime renage like start and end date
+  // Define a function that takes two date objects as parameters
+  getMonthNamesBetween = function (date1, date2) {
+    let months = [];
+    let currDate = new Date(date1);
+    while (currDate <= date2) {
+      months.push(currDate.toLocaleString('default', { month: 'long' }));
+      currDate.setMonth(currDate.getMonth() + 1);
+    }
+    return months;
+  }
+
+  getInputTimeValue = function (inputClass) {
+    let timeValue = $(inputClass).find(".bp4-timepicker-hour").val();
+    timeValue += ":" + $(inputClass).find(".bp4-timepicker-minute").val();
+    timeValue += ":" + $(inputClass).find(".bp4-timepicker-second").val();
+    return timeValue;
+  };
+
+  getExt = function (path) {
+    let ext =
+      path.match(/(?:.+..+[^\/]+$)/gi) != null
+        ? path.split(".").slice(-1)
+        : ["null"];
+    return ext[0].toLowerCase();
+  };
+
+  getWeekBoxCss = function (playlist_days, weekday) {
+    let weekBoxCss = "weekbox";
+    if (weekday == "Sun") weekBoxCss += " sunday";
+    if (weekday == "Sat") weekBoxCss += " saturday";
+    if (
+      playlist_days == "Everyday" ||
+      playlist_days.split(",").includes(weekday)
+    )
+      weekBoxCss += " weekday-selected";
+    return weekBoxCss;
+  };
+
+  availableStaticFontFamilys = function () {
+    const systemFontFamily = [
+      // "Microsoft JhengHei",
+      // "Microsoft YaHei",
+      // "Heiti TC",
+      "Times",
+      "Times New Roman",
+      // "Georgia",
+      "serif",
+      // "Verdana",
+      "Arial",
+      "Helvetica",
+      "sans-serif",
+      "Lucida Console",
+      "Courier",
+      "monospace",
+      "cursive",
+      "fantasy",
+    ];
+
+    const WebFontFamily = [
+      "AlegreyaSans Light",
+      "AlegreyaSans ",
+      "AlegreyaSans Medium",
+      "AlegreyaSans Black",
+
+      "BioRhyme Light",
+      "BioRhyme",
+
+      "Cairo Light",
+      "Cairo",
+      "Cairo Black",
+      "Cairo SemiBold",
+      "Cardo",
+
+      "Chivo Light",
+      "Chivo",
+      "Chivo Black",
+
+      "Cormorant Light",
+      "Cormorant",
+
+      "Cormorant SemiBold",
+      "CormorantGaramond Light",
+      "CormorantGaramond",
+      "CormorantGaramond SemiBold",
+      "CormorantInfant Light",
+      "CormorantInfant",
+      "CormorantInfant SemiBold",
+
+      "CormorantSC Light",
+      "CormorantSC",
+      "CormorantSC SemiBold",
+
+      "CormorantUpright",
+      "CormorantUpright SemiBold",
+
+      "CrimsonText",
+      "CrimsonText SemiBold",
+
+      "cwTeXFangSong zhonly",
+      "cwTeXHei zhonly",
+      "cwTeXKai zhonly",
+      "cwTeXMing zhonly",
+      "cwTeXYen zhonly",
+
+      "FiraSans Light",
+      "FiraSans",
+      "FiraSans SemiBold",
+      "FiraSans Black",
+
+      "FiraSansCondensed Light",
+      "FiraSansCondensed",
+      "FiraSansCondensed Black",
+      "FiraSansCondensed SemiBold",
+
+      "FreeHK Kai 4700",
+
+      "IBMPlexSans Light",
+      "IBMPlexSans",
+      "IBMPlexSans SemiBold",
+
+      "Lato Light",
+      "Lato",
+
+      "Lato SemiBold",
+      "Lato Black",
+
+      "LibreBaskerville",
+
+      "Lora",
+
+      "NotoSansCJKtc Thin",
+      "NotoSansCJKtc Light",
+      "NotoSansCJKtc DemiLight",
+      "NotoSansCJKtc Regular",
+      "NotoSansCJKtc Medium",
+      "NotoSansCJKtc Blod",
+      "NotoSansCJKtc Black",
+
+      "NotoSansHK Thin.",
+      "NotoSansHK Light",
+      "NotoSansHK Regular",
+      "NotoSansHK Blod",
+      "NotoSansHK Medium",
+      "NotoSansHK Black",
+
+      "NotoSansMonoCJKtc Regular",
+      "NotoSansMonoCJKtc Bold",
+
+      "NotoSerifCJKtc Light",
+      "NotoSerifCJKtc Regular",
+      "NotoSerifCJKtc Blod",
+      "NotoSerifCJKtc Medium",
+      "NotoSerifCJKtc Black",
+      "NotoSerifCJKtc SemiBold",
+      "NotoSerifCJKtc ExtraLight",
+
+      "NotoSans Light",
+      "NotoSans",
+      "NotoSans Black",
+      "NotoSans SemiBold",
+      "NotoSans Condensed-Light",
+      "NotoSans Condensed",
+      "NotoSans Condensed-Black",
+      "NotoSans Condensed-SemiBold",
+      "NotoSans SemiCondensed-Light",
+      "NotoSans SemiCondensed",
+      "NotoSans SemiCondensed-Black",
+      "NotoSans SemiCondensed-SemiBold",
+      "NotoSans ExtraCondensed-Light",
+      "NotoSans ExtraCondensed",
+      "NotoSans ExtraCondensed-Black",
+      "NotoSans ExtraCondensed-SemiBold",
+
+      "NotoSerif Light",
+      "NotoSerif",
+      "NotoSerif Black",
+      "NotoSerif SemiBold",
+      "NotoSerif Condensed-Light",
+      "NotoSerif Condensed",
+      "NotoSerif Condensed-SemiBold",
+      "NotoSerif Condensed-Black",
+      "NotoSerif SemiCondensed-Light",
+      "NotoSerif SemiCondensed",
+      "NotoSerif SemiCondensed-Black",
+      "NotoSerif SemiCondensed-SemiBold",
+      "NotoSerif ExtraCondensed-Light",
+      "NotoSerif ExtraCondensed",
+      "NotoSerif ExtraCondensed-Black",
+      "NotoSerif ExtraCondensed-SemiBold",
+
+      "OpenSans Light",
+      "OpenSans",
+      "OpenSans SemiBold",
+
+      "Poppins Light",
+      "Poppins",
+      "Poppins Black",
+      "Poppins SemiBold",
+
+      "ProzaLibre",
+      "ProzaLibre SemiBold",
+
+      "PT_Sans-Web",
+      "PT_Serif-Web",
+
+      "Raleway Light",
+      "Raleway",
+      "Raleway Black",
+      "Raleway SemiBold",
+
+      "Roboto Light",
+      "Roboto",
+      "Roboto Black",
+
+      "RobotoSlab Light",
+      "RobotoSlab",
+      "RobotoSlab Black",
+
+      "Rubik Light",
+      "Rubik",
+      "Rubik Black",
+
+      "SourceSansPro Light",
+      "SourceSansPro",
+      "SourceSansPro Black",
+      "SourceSansPro SemiBold",
+      "SourceSansPro ExtraLight",
+      "SourceSerifPro Light",
+      "SourceSerifPro",
+      "SourceSerifPro Black",
+      "SourceSerifPro Semibold",
+
+      "WorkSans Light",
+      "WorkSans",
+      "WorkSans Black",
+      "WorkSans SemiBold",
+    ];
+
+    return { systemFonts: systemFontFamily, webFonts: WebFontFamily };
+  };
+
+  //ifusion helper methods
+  getRenderScaleStyle = function (viewScale, domStyle) {
+    const scaleProperties = [
+      "width",
+      "height",
+      "fontSize",
+      "left",
+      "top",
+      "borderWidth",
+      "borderRadius",
+      "margin",
+      "marginTop",
+      "marginRight",
+      "marginBottom",
+      "marginLeft",
+      "padding",
+      "paddingTop",
+      "paddingRight",
+      "paddingBottom",
+      "paddingLeft",
+    ];
+    // console.log("domStyle", domStyle);
+    let scaleStyle = {};
+    if (typeof domStyle != "undefined"){
+      scaleStyle = JSON.parse(JSON.stringify(domStyle));
+      Object.keys(scaleStyle).forEach((key) => {
+        if (scaleProperties.includes(key) && scaleStyle[key] != "auto") {
+          let propertyValue = scaleStyle[key];
+          // for fix value was NaN error
+          if (propertyValue == "NaNpx" || propertyValue == "-px" ) propertyValue = "0px";
+          // console.log("propertyValue", propertyValue)
+          let numValue = this.isNumeric(propertyValue)
+            ? Number(propertyValue)
+            : propertyValue.match(/(\d+)/)[0];
+          //for fix negative number value
+          if (propertyValue.indexOf("-") == 0) numValue = numValue * -1;
+
+          let unit = propertyValue.indexOf("px") !== -1 ? "px" : "";
+          scaleStyle[key] = `${numValue * viewScale}${unit}`;
+        }
+      });
+    }
+    // console.log("scaleStyle", scaleStyle);
+    return scaleStyle;
+  };
+
+  itemShapeBoundfieldText = function (
+    fieldkey,
+    bounditem,
+    domStyle,
+    viewPriceGroupId = null
+  ) {
+    let fieldText = "";
+    const generalFields = [
+      "procode",
+      "name_e",
+      "name_s",
+      "desc_e",
+      "desc_s",
+      "procode",
+    ];
+
+    if (generalFields.includes(fieldkey)) { // fieldkey is a generalFields
+      fieldText = bounditem[fieldkey];
+    } else if (fieldkey.includes("priceClass_")) { // fieldkey is a price fields
+      let priceClassId = fieldkey.substr(11);
+      // console.log("fieldkey", fieldkey)
+      // console.log("priceClassId", priceClassId)
+      // console.log("bounditem.proprices", bounditem.proprices)
+      let price = bounditem.proprices.find(
+        (itemPrice) => itemPrice.price_class.id == priceClassId
+      );
+      
+      // apply priceGroup affect
+      if (viewPriceGroupId) {
+        price = bounditem.proprices.find(
+          (itemPrice) =>
+            itemPrice.price_class.id == priceClassId &&
+            itemPrice.price_group_id == viewPriceGroupId
+        );
+      }
+      
+      // not get price object, finally take the take the default price class
+      if (typeof price == "undefined") { 
+        price = bounditem.proprices.find(
+          (itemPrice) => itemPrice.price_class.value == "Default"
+        );
+        // console.log("bounditem.price", price)
+      }
+
+      let symbols = "";
+      // console.log("domStyle", domStyle)
+      currencySymbols.forEach((currency) => {
+        for (const [key, value] of Object.entries(currency)) {
+          if (domStyle.currency == key)
+          symbols = value
+        }
+      });
+
+      // console.log("price", price)
+      if (typeof price != "undefined") {
+        if (price.value.indexOf(".") > 0) {
+          fieldText = (
+            <div className="item-price">
+                <span style={{ fontSize: "86%", verticalAlign: "5%" }} >{ symbols != "" ?  `${symbols} `  :  ""}</span>
+                { price.value.substr(0, price.value.indexOf("."))}
+                <span style={{ fontSize: "80%" }}>
+                    {price.value.substr(price.value.indexOf("."))}
+                </span>
+            </div>
+          );
+        } else {
+          fieldText = <div className="item-price">
+                        <span style={{ fontSize: "86%", verticalAlign: "5%"  }} >{ symbols != "" ?  `${symbols} `  :  ""}</span>
+                        {price.value}
+                      </div>;
+        }
+      }
+
+    } else if (fieldkey.includes("extra_")) {
+      const field_name = fieldkey.substr(6);
+      if (bounditem.data_field) {
+        const fieldNameList = JSON.parse(bounditem.data_field.fields);
+        const fields_value = JSON.parse(bounditem.fields_value);
+        if (
+          typeof fields_value[fieldNameList.indexOf(field_name)] != "undefined"
+        )
+          fieldText = fields_value[fieldNameList.indexOf(field_name)];
+      }
+    }
+
+    return fieldText;
+  };
+
+  //todo reform express of fusionLayout , staticElement and listBlock to domStyle
+  fusionLayoutParseDomStyle = (fusionLayout) => {
+    let _fusionLayout = {...fusionLayout};
+    _fusionLayout.domStyle = JSON.parse(_fusionLayout.express);
+    //parse the staticElements express to domStyle
+    let _staticElements = [..._fusionLayout.staticElements];
+    _staticElements.map((staticElement) => (
+        { ...staticElement,
+          domStyle: JSON.parse(staticElement.express)
+        }
+        ));
+    _fusionLayout.staticElements = _staticElements;
+    //parse the staticElements express to domStyle
+    let _listBlocks = [..._fusionLayout.listBlocks];
+    _listBlocks.map((listBlock) => (
+      { ...listBlock,
+        domStyle: JSON.parse(listBlock.express)
+      }
+      ));
+    _fusionLayout.listBlocks = _listBlocks;
+
+    return _fusionLayout;
+  };
+
+  ifusionTextWrapHandler = (domId, domStyle, viewScale) => {
+    setTimeout(() => {
+      if (
+        typeof domStyle.whiteSpace !== "undefined" &&
+        domStyle.whiteSpace == "nowrap"
+      ) {
+        const domRenderStyle = this.getRenderScaleStyle(viewScale, domStyle);
+        const parentWidth = $(`#${domId}`).parent().width();
+        const paddingValue =
+          this.inputValueToNumber(domRenderStyle.paddingLeft) +
+          this.inputValueToNumber(domRenderStyle.paddingRight);
+        const segmentWidth = $(`#${domId}`).width() + paddingValue * 2;
+        if (segmentWidth > parentWidth) {
+          let scaleX = Math.floor((parentWidth / segmentWidth) * 100) / 100;
+          // $(`#${domId}`).css("transform-origin", "left center");
+          $(`#${domId}`).css("transform", `scaleX(${scaleX})`);
+        } else {
+          $(`#${domId}`).css("transform", domStyle.transform);
+        }
+      } else {
+        // $(`#${domId}`).css("transform-origin", "left center");
+        if (typeof domStyle.transform == "undefined") {
+          $(`#${domId}`).css("transform", "scaleX(1)");
+        } else {
+          $(`#${domId}`).css("transform", domStyle.transform);
+        }
+      }
+
+      const x_axis =
+        domStyle.textAlign == "justify" ? "center" : domStyle.textAlign;
+      $(`#${domId}`).css("transform-origin", `${x_axis} center`);
+    }, 300);
+    return "true";
+  };
+}
+// export default Apphelper;
+
+export const appHelper = new AppHelper();

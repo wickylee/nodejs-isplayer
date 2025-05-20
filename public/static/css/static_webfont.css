@@ -1,0 +1,388 @@
+    @font-face { font-family: "AlegreyaSans Light"; src: url("/static/webfonts/alegreyasans/AlegreyaSans-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "AlegreyaSans Light"; src: url("/static/webfonts/alegreyasans/AlegreyaSans-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "AlegreyaSans "; src: url("/static/webfonts/alegreyasans/AlegreyaSans-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "AlegreyaSans "; src: url("/static/webfonts/alegreyasans/AlegreyaSans-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "AlegreyaSans "; src: url("/static/webfonts/alegreyasans/AlegreyaSans-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "AlegreyaSans "; src: url("/static/webfonts/alegreyasans/AlegreyaSans-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "AlegreyaSans Medium"; src: url("/static/webfonts/alegreyasans/AlegreyaSans-Medium.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "AlegreyaSans Medium"; src: url("/static/webfonts/alegreyasans/AlegreyaSans-MediumItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "AlegreyaSans Black"; src: url("/static/webfonts/alegreyasans/AlegreyaSans-Black.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "AlegreyaSans Black"; src: url("/static/webfonts/alegreyasans/AlegreyaSans-BlackItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "BioRhyme Light"; src: url("/static/webfonts/biorhyme/BioRhyme-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "BioRhyme"; src: url("/static/webfonts/biorhyme/BioRhyme-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "BioRhyme"; src: url("/static/webfonts/biorhyme/BioRhyme-Bold.ttf"); font-weight: bold; font-style: normal; }
+
+
+    @font-face { font-family: "Cairo Light"; src: url("/static/webfonts/cairo/Cairo-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Cairo"; src: url("/static/webfonts/cairo/Cairo-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Cairo"; src: url("/static/webfonts/cairo/Cairo-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "Cairo Black"; src: url("/static/webfonts/cairo/Cairo-Black.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Cairo SemiBold"; src: url("/static/webfonts/cairo/Cairo-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+
+
+    @font-face { font-family: "Cardo"; src: url("/static/webfonts/cardo/Cardo-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Cardo"; src: url("/static/webfonts/cardo/Cardo-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Cardo"; src: url("/static/webfonts/cardo/Cardo-Bold.ttf"); font-weight: bold; font-style: normal; }
+
+
+    @font-face { font-family: "Chivo Light"; src: url("/static/webfonts/chivo/Chivo-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Chivo Light"; src: url("/static/webfonts/chivo/Chivo-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Chivo"; src: url("/static/webfonts/chivo/Chivo-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Chivo"; src: url("/static/webfonts/chivo/Chivo-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Chivo"; src: url("/static/webfonts/chivo/Chivo-Bold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Chivo"; src: url("/static/webfonts/chivo/Chivo-BoldItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Chivo Black"; src: url("/static/webfonts/chivo/Chivo-Black.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Chivo Black"; src: url("/static/webfonts/chivo/Chivo-BlackItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "Cormorant Light"; src: url("/static/webfonts/cormorant/cormorant/Cormorant-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Cormorant Light"; src: url("/static/webfonts/cormorant/cormorant/Cormorant-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Cormorant"; src: url("/static/webfonts/cormorant/cormorant/Cormorant-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Cormorant"; src: url("/static/webfonts/cormorant/cormorant/Cormorant-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Cormorant"; src: url("/static/webfonts/cormorant/cormorant/Cormorant-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "Cormorant"; src: url("/static/webfonts/cormorant/cormorant/Cormorant-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "Cormorant SemiBold"; src: url("/static/webfonts/cormorant/cormorant/Cormorant-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Cormorant SemiBold"; src: url("/static/webfonts/cormorant/cormorant/Cormorant-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "CormorantGaramond Light"; src: url("/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "CormorantGaramond Light"; src: url("/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "CormorantGaramond"; src: url("/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "CormorantGaramond"; src: url("/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "CormorantGaramond"; src: url("/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "CormorantGaramond"; src: url("/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "CormorantGaramond SemiBold"; src: url("/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "CormorantGaramond SemiBold-Italic"; src: url("/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "CormorantInfant Light"; src: url("/static/webfonts/cormorant/cormorantinfant/CormorantInfant-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "CormorantInfant Light"; src: url("/static/webfonts/cormorant/cormorantinfant/CormorantInfant-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "CormorantInfant"; src: url("/static/webfonts/cormorant/cormorantinfant/CormorantInfant-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "CormorantInfant"; src: url("/static/webfonts/cormorant/cormorantinfant/CormorantInfant-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "CormorantInfant"; src: url("/static/webfonts/cormorant/cormorantinfant/CormorantInfant-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "CormorantInfant"; src: url("/static/webfonts/cormorant/cormorantinfant/CormorantInfant-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "CormorantInfant SemiBold"; src: url("/static/webfonts/cormorant/cormorantinfant/CormorantInfant-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "CormorantInfant SemiBold-Italic"; src: url("/static/webfonts/cormorant/cormorantinfant/CormorantInfant-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "CormorantSC Light"; src: url("/static/webfonts/cormorant/cormorantsc/CormorantSC-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "CormorantSC"; src: url("/static/webfonts/cormorant/cormorantsc/CormorantSC-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "CormorantSC"; src: url("/static/webfonts/cormorant/cormorantsc/CormorantSC-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "CormorantSC SemiBold"; src: url("/static/webfonts/cormorant/cormorantsc/CormorantSC-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+
+
+    @font-face { font-family: "CormorantUpright"; src: url("/static/webfonts/cormorant/cormorantupright/CormorantUpright-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "CormorantUpright"; src: url("/static/webfonts/cormorant/cormorantupright/CormorantUpright-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "CormorantUpright SemiBold"; src: url("/static/webfonts/cormorant/cormorantupright/CormorantUpright-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+
+
+    @font-face { font-family: "CrimsonText"; src: url("/static/webfonts/crimsontext/CrimsonText-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "CrimsonText"; src: url("/static/webfonts/crimsontext/CrimsonText-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "CrimsonText"; src: url("/static/webfonts/crimsontext/CrimsonText-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "CrimsonText"; src: url("/static/webfonts/crimsontext/CrimsonText-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "CrimsonText SemiBold"; src: url("/static/webfonts/crimsontext/CrimsonText-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "CrimsonText SemiBold"; src: url("/static/webfonts/crimsontext/CrimsonText-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+    @font-face { font-family: "cwTeXFangSong zhonly"; src: url("/static/webfonts/cwtex/cwTeXFangSong-zhonly.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "cwTeXHei zhonly"; src: url("/static/webfonts/cwtex/cwTeXHei-zhonly.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "cwTeXKai zhonly"; src: url("/static/webfonts/cwtex/cwTeXKai-zhonly.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "cwTeXMing zhonly"; src: url("/static/webfonts/cwtex/cwTeXMing-zhonly.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "cwTeXYen zhonly"; src: url("/static/webfonts/cwtex/cwTeXYen-zhonly.ttf"); font-weight: normal; font-style: normal; }
+
+
+    @font-face { font-family: "FiraSans Light"; src: url("/static/webfonts/firasans/firasans/FiraSans-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "FiraSans Light"; src: url("/static/webfonts/firasans/firasans/FiraSans-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "FiraSans"; src: url("/static/webfonts/firasans/firasans/FiraSans-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "FiraSans"; src: url("/static/webfonts/firasans/firasans/FiraSans-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "FiraSans"; src: url("/static/webfonts/firasans/firasans/FiraSans-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "FiraSans"; src: url("/static/webfonts/firasans/firasans/FiraSans-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "FiraSans SemiBold"; src: url("/static/webfonts/firasans/firasans/FiraSans-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "FiraSans SemiBold"; src: url("/static/webfonts/firasans/firasans/FiraSans-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "FiraSans Black"; src: url("/static/webfonts/firasans/firasans/FiraSans-Black.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "FiraSans Black"; src: url("/static/webfonts/firasans/firasans/FiraSans-BlackItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "FiraSansCondensed Light"; src: url("/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "FiraSansCondensed Light"; src: url("/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "FiraSansCondensed"; src: url("/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "FiraSansCondensed"; src: url("/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "FiraSansCondensed"; src: url("/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "FiraSansCondensed"; src: url("/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "FiraSansCondensed Black"; src: url("/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-Black.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "FiraSansCondensed Black"; src: url("/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-BlackItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "FiraSansCondensed SemiBold"; src: url("/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "FiraSansCondensed SemiBold"; src: url("/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "FreeHK Kai 4700"; src: url("/static/webfonts/free_hk/Free-HK-Kai_4700.ttf"); font-weight: normal; font-style: normal; }
+
+
+    @font-face { font-family: "IBMPlexSans Light"; src: url("/static/webfonts/ibmplexsans/IBMPlexSans-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "IBMPlexSans Light"; src: url("/static/webfonts/ibmplexsans/IBMPlexSans-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "IBMPlexSans"; src: url("/static/webfonts/ibmplexsans/IBMPlexSans-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "IBMPlexSans"; src: url("/static/webfonts/ibmplexsans/IBMPlexSans-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "IBMPlexSans"; src: url("/static/webfonts/ibmplexsans/IBMPlexSans-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "IBMPlexSans"; src: url("/static/webfonts/ibmplexsans/IBMPlexSans-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "IBMPlexSans SemiBold"; src: url("/static/webfonts/ibmplexsans/IBMPlexSans-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "IBMPlexSans SemiBold-Italic"; src: url("/static/webfonts/ibmplexsans/IBMPlexSans-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+	@font-face { font-family: "Lato Light"; src: url("/static/webfonts/lato/Lato-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Lato Light"; src: url("/static/webfonts/lato/Lato-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Lato"; src: url("/static/webfonts/lato/Lato-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Lato"; src: url("/static/webfonts/lato/Lato-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Lato"; src: url("/static/webfonts/lato/Lato-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "Lato"; src: url("/static/webfonts/lato/Lato-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "Lato SemiBold"; src: url("/static/webfonts/lato/Lato-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Lato SemiBold"; src: url("/static/webfonts/lato/Lato-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Lato Black"; src: url("/static/webfonts/lato/Lato-Black.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Lato Black"; src: url("/static/webfonts/lato/Lato-BlackItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "LibreBaskerville"; src: url("/static/webfonts/librebaskerville/LibreBaskerville-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "LibreBaskerville"; src: url("/static/webfonts/librebaskerville/LibreBaskerville-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "LibreBaskerville"; src: url("/static/webfonts/librebaskerville/LibreBaskerville-Bold.ttf"); font-weight: bold; font-style: normal; }
+
+
+    @font-face { font-family: "Lora"; src: url("/static/webfonts/lora/Lora-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Lora"; src: url("/static/webfonts/lora/Lora-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Lora"; src: url("/static/webfonts/lora/Lora-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "Lora"; src: url("/static/webfonts/lora/Lora-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+
+
+    @font-face { font-family: "NotoSansCJKtc Thin"; src: url("/static/webfonts/noto_asia/NotoSansCJKtc-Thin.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSansCJKtc Light"; src: url("/static/webfonts/noto_asia/NotoSansCJKtc-Light.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSansCJKtc DemiLight"; src: url("/static/webfonts/noto_asia/NotoSansCJKtc-DemiLight.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSansCJKtc Regular"; src: url("/static/webfonts/noto_asia/NotoSansCJKtc-Regular.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSansCJKtc Medium"; src: url("/static/webfonts/noto_asia/NotoSansCJKtc-Medium.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSansCJKtc Blod"; src: url("/static/webfonts/noto_asia/NotoSansCJKtc-Bold.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSansCJKtc Black"; src: url("/static/webfonts/noto_asia/NotoSansCJKtc-Black.otf"); font-weight: normal; font-style: normal; }
+
+
+    @font-face { font-family: "NotoSansHK Thin."; src: url("/static/webfonts/noto_asia/NotoSansHK-Thin.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSansHK Light"; src: url("/static/webfonts/noto_asia/NotoSansHK-Light.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSansHK Regular"; src: url("/static/webfonts/noto_asia/NotoSansHK-Regular.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSansHK Blod"; src: url("/static/webfonts/noto_asia/NotoSansHK-Bold.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSansHK Medium"; src: url("/static/webfonts/noto_asia/NotoSansHK-Medium.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSansHK Black"; src: url("/static/webfonts/noto_asia/NotoSansHK-Black.otf"); font-weight: normal; font-style: normal; }
+
+    @font-face { font-family: "NotoSansMonoCJKtc Regular"; src: url("/static/webfonts/noto_asia/NotoSansMonoCJKtc-Regular.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSansMonoCJKtc Blod"; src: url("/static/webfonts/noto_asia/NotoSansMonoCJKtc-Bold.otf"); font-weight: normal; font-style: normal; }
+
+    @font-face { font-family: "NotoSerifCJKtc Light"; src: url("/static/webfonts/noto_asia/NotoSerifCJKtc-Light.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerifCJKtc Regular"; src: url("/static/webfonts/noto_asia/NotoSerifCJKtc-Regular.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerifCJKtc Blod"; src: url("/static/webfonts/noto_asia/NotoSerifCJKtc-Bold.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerifCJKtc Medium"; src: url("/static/webfonts/noto_asia/NotoSerifCJKtc-Medium.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerifCJKtc Black"; src: url("/static/webfonts/noto_asia/NotoSerifCJKtc-Black.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerifCJKtc SemiBold"; src: url("/static/webfonts/noto_asia/NotoSerifCJKtc-SemiBold.otf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerifCJKtc ExtraLight"; src: url("/static/webfonts/noto_asia/NotoSerifCJKtc-ExtraLight.otf"); font-weight: normal; font-style: normal; }
+
+
+    @font-face { font-family: "NotoSans Light"; src: url("/static/webfonts/notosans/NotoSans-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans Light"; src: url("/static/webfonts/notosans/NotoSans-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSans"; src: url("/static/webfonts/notosans/NotoSans-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans"; src: url("/static/webfonts/notosans/NotoSans-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSans"; src: url("/static/webfonts/notosans/NotoSans-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "NotoSans"; src: url("/static/webfonts/notosans/NotoSans-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "NotoSans Black"; src: url("/static/webfonts/notosans/NotoSans-Black.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans Black"; src: url("/static/webfonts/notosans/NotoSans-BlackItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSans SemiBold"; src: url("/static/webfonts/notosans/NotoSans-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans SemiBold"; src: url("/static/webfonts/notosans/NotoSans-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "NotoSans Condensed-Light"; src: url("/static/webfonts/notosans/NotoSans-CondensedLight.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans Condensed-Light"; src: url("/static/webfonts/notosans/NotoSans-CondensedLightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSans Condensed"; src: url("/static/webfonts/notosans/NotoSans-Condensed.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans Condensed"; src: url("/static/webfonts/notosans/NotoSans-CondensedItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSans Condensed"; src: url("/static/webfonts/notosans/NotoSans-CondensedBold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "NotoSans Condensed"; src: url("/static/webfonts/notosans/NotoSans-CondensedBoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "NotoSans Condensed-Black"; src: url("/static/webfonts/notosans/NotoSans-CondensedBlack.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans Condensed-Black"; src: url("/static/webfonts/notosans/NotoSans-CondensedBlackItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSans Condensed-SemiBold"; src: url("/static/webfonts/notosans/NotoSans-CondensedSemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans Condensed-SemiBold"; src: url("/static/webfonts/notosans/NotoSans-CondensedSemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "NotoSans SemiCondensed-Light"; src: url("/static/webfonts/notosans/NotoSans-SemiCondensedLight.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans SemiCondensed-Light"; src: url("/static/webfonts/notosans/NotoSans-SemiCondensedLightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSans SemiCondensed"; src: url("/static/webfonts/notosans/NotoSans-SemiCondensed.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans SemiCondensed"; src: url("/static/webfonts/notosans/NotoSans-SemiCondensedItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSans SemiCondensed"; src: url("/static/webfonts/notosans/NotoSans-SemiCondensedBold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "NotoSans SemiCondensed-Black"; src: url("/static/webfonts/notosans/NotoSans-SemiCondensedBlack.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans SemiCondensed-Black"; src: url("/static/webfonts/notosans/NotoSans-SemiCondensedBlackItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSans SemiCondensed-SemiBold"; src: url("/static/webfonts/notosans/NotoSans-SemiCondensedSemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans SemiCondensed-SemiBold"; src: url("/static/webfonts/notosans/NotoSans-SemiCondensedSemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+    @font-face { font-family: "NotoSans ExtraCondensed-Light"; src: url("/static/webfonts/notosans/NotoSans-ExtraCondensedLight.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans ExtraCondensed-Light"; src: url("/static/webfonts/notosans/NotoSans-ExtraCondensedLightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSans ExtraCondensed"; src: url("/static/webfonts/notosans/NotoSans-ExtraCondensed.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans ExtraCondensed"; src: url("/static/webfonts/notosans/NotoSans-ExtraCondensedItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSans ExtraCondensed"; src: url("/static/webfonts/notosans/NotoSans-ExtraCondensedBold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "NotoSans ExtraCondensed"; src: url("/static/webfonts/notosans/NotoSans-ExtraCondensedBoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "NotoSans ExtraCondensed-Black"; src: url("/static/webfonts/notosans/NotoSans-ExtraCondensedBlack.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans ExtraCondensed-Black"; src: url("/static/webfonts/notosans/NotoSans-ExtraCondensedBlackItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSans ExtraCondensed-SemiBold"; src: url("/static/webfonts/notosans/NotoSans-ExtraCondensedSemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSans ExtraCondensed-SemiBold"; src: url("/static/webfonts/notosans/NotoSans-ExtraCondensedSemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "NotoSerif Light"; src: url("/static/webfonts/notoserif/NotoSerif-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif Light"; src: url("/static/webfonts/notoserif/NotoSerif-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSerif"; src: url("/static/webfonts/notoserif/NotoSerif-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif"; src: url("/static/webfonts/notoserif/NotoSerif-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSerif"; src: url("/static/webfonts/notoserif/NotoSerif-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "NotoSerif"; src: url("/static/webfonts/notoserif/NotoSerif-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "NotoSerif Black"; src: url("/static/webfonts/notoserif/NotoSerif-Black.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif Black"; src: url("/static/webfonts/notoserif/NotoSerif-BlackItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSerif SemiBold"; src: url("/static/webfonts/notoserif/NotoSerif-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif SemiBold"; src: url("/static/webfonts/notoserif/NotoSerif-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+	@font-face { font-family: "NotoSerif Condensed-Light"; src: url("/static/webfonts/notoserif/NotoSerif-CondensedLight.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif Condensed-Light"; src: url("/static/webfonts/notoserif/NotoSerif-CondensedLightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSerif Condensed"; src: url("/static/webfonts/notoserif/NotoSerif-Condensed.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif Condensed"; src: url("/static/webfonts/notoserif/NotoSerif-CondensedItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSerif Condensed"; src: url("/static/webfonts/notoserif/NotoSerif-CondensedBold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "NotoSerif Condensed"; src: url("/static/webfonts/notoserif/NotoSerif-CondensedBoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "NotoSerif Condensed-SemiBold"; src: url("/static/webfonts/notoserif/NotoSerif-CondensedSemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif Condensed-SemiBold"; src: url("/static/webfonts/notoserif/NotoSerif-CondensedSemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSerif Condensed-Black"; src: url("/static/webfonts/notoserif/NotoSerif-CondensedBlack.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif Condensed-Black"; src: url("/static/webfonts/notoserif/NotoSerif-CondensedBlackItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "NotoSerif SemiCondensed-Light"; src: url("/static/webfonts/notoserif/NotoSerif-SemiCondensedLight.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif SemiCondensed-Light"; src: url("/static/webfonts/notoserif/NotoSerif-SemiCondensedLightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSerif SemiCondensed"; src: url("/static/webfonts/notoserif/NotoSerif-SemiCondensed.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif SemiCondensed"; src: url("/static/webfonts/notoserif/NotoSerif-SemiCondensedItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSerif SemiCondensed"; src: url("/static/webfonts/notoserif/NotoSerif-SemiCondensedBold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "NotoSerif SemiCondensed"; src: url("/static/webfonts/notoserif/NotoSerif-SemiCondensedBoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "NotoSerif SemiCondensed-Black"; src: url("/static/webfonts/notoserif/NotoSerif-SemiCondensedBlack.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif SemiCondensed-Black"; src: url("/static/webfonts/notoserif/NotoSerif-SemiCondensedBlackItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSerif SemiCondensed-SemiBold"; src: url("/static/webfonts/notoserif/NotoSerif-SemiCondensedSemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif SemiCondensed-SemiBold"; src: url("/static/webfonts/notoserif/NotoSerif-SemiCondensedSemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "NotoSerif ExtraCondensed-Light"; src: url("/static/webfonts/notoserif/NotoSerif-ExtraCondensedLight.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif ExtraCondensed-Light"; src: url("/static/webfonts/notoserif/NotoSerif-ExtraCondensedLightItalic.ttf"); font-weight: normal; font-style: noitalicmal; }
+    @font-face { font-family: "NotoSerif ExtraCondensed"; src: url("/static/webfonts/notoserif/NotoSerif-ExtraCondensed.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif ExtraCondensed"; src: url("/static/webfonts/notoserif/NotoSerif-ExtraCondensedItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSerif ExtraCondensed"; src: url("/static/webfonts/notoserif/NotoSerif-ExtraCondensedBold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "NotoSerif ExtraCondensed"; src: url("/static/webfonts/notoserif/NotoSerif-ExtraCondensedBoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "NotoSerif ExtraCondensed-Black"; src: url("/static/webfonts/notoserif/NotoSerif-ExtraCondensedBlack.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif ExtraCondensed-Black"; src: url("/static/webfonts/notoserif/NotoSerif-ExtraCondensedBlackItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "NotoSerif ExtraCondensed-SemiBold"; src: url("/static/webfonts/notoserif/NotoSerif-ExtraCondensedSemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "NotoSerif ExtraCondensed-SemiBold"; src: url("/static/webfonts/notoserif/NotoSerif-ExtraCondensedSemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "OpenSans Light"; src: url("/static/webfonts/opensans/OpenSans-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "OpenSans Light"; src: url("/static/webfonts/opensans/OpenSans-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "OpenSans"; src: url("/static/webfonts/opensans/OpenSans-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "OpenSans"; src: url("/static/webfonts/opensans/OpenSans-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "OpenSans"; src: url("/static/webfonts/opensans/OpenSans-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "OpenSans"; src: url("/static/webfonts/opensans/OpenSans-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "OpenSans SemiBold"; src: url("/static/webfonts/opensans/OpenSans-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "OpenSans SemiBold"; src: url("/static/webfonts/opensans/OpenSans-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "Poppins Light"; src: url("/static/webfonts/poppins/Poppins-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Poppins Light"; src: url("/static/webfonts/poppins/Poppins-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Poppins"; src: url("/static/webfonts/poppins/Poppins-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Poppins"; src: url("/static/webfonts/poppins/Poppins-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Poppins"; src: url("/static/webfonts/poppins/Poppins-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "Poppins"; src: url("/static/webfonts/poppins/Poppins-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "Poppins Black"; src: url("/static/webfonts/poppins/Poppins-Black.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Poppins Black"; src: url("/static/webfonts/poppins/Poppins-BlackItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Poppins SemiBold"; src: url("/static/webfonts/poppins/Poppins-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Poppins SemiBold"; src: url("/static/webfonts/poppins/Poppins-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "ProzaLibre"; src: url("/static/webfonts/prozalibre/ProzaLibre-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "ProzaLibre"; src: url("/static/webfonts/prozalibre/ProzaLibre-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "ProzaLibre"; src: url("/static/webfonts/prozalibre/ProzaLibre-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "ProzaLibre"; src: url("/static/webfonts/prozalibre/ProzaLibre-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "ProzaLibre SemiBold"; src: url("/static/webfonts/prozalibre/ProzaLibre-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "ProzaLibre SemiBold"; src: url("/static/webfonts/prozalibre/ProzaLibre-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "PT_Sans-Web"; src: url("/static/webfonts/ptsans/PT_Sans-Web-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "PT_Sans-Web"; src: url("/static/webfonts/ptsans/PT_Sans-Web-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "PT_Sans-Web"; src: url("/static/webfonts/ptsans/PT_Sans-Web-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "PT_Sans-Web"; src: url("/static/webfonts/ptsans/PT_Sans-Web-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+
+
+    @font-face { font-family: "PT_Serif-Web"; src: url("/static/webfonts/ptserif/PT_Serif-Web-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "PT_Serif-Web"; src: url("/static/webfonts/ptserif/PT_Serif-Web-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "PT_Serif-Web"; src: url("/static/webfonts/ptserif/PT_Serif-Web-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "PT_Serif-Web"; src: url("/static/webfonts/ptserif/PT_Serif-Web-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+
+
+    @font-face { font-family: "Raleway Light"; src: url("/static/webfonts/raleway/Raleway-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Raleway Light"; src: url("/static/webfonts/raleway/Raleway-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Raleway"; src: url("/static/webfonts/raleway/Raleway-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Raleway"; src: url("/static/webfonts/raleway/Raleway-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Raleway"; src: url("/static/webfonts/raleway/Raleway-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "Raleway"; src: url("/static/webfonts/raleway/Raleway-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "Raleway Black"; src: url("/static/webfonts/raleway/Raleway-Black.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Raleway Black"; src: url("/static/webfonts/raleway/Raleway-BlackItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Raleway SemiBold"; src: url("/static/webfonts/raleway/Raleway-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Raleway SemiBold"; src: url("/static/webfonts/raleway/Raleway-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "Roboto Light"; src: url("/static/webfonts/roboto/Roboto-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Roboto Light"; src: url("/static/webfonts/roboto/Roboto-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Roboto"; src: url("/static/webfonts/roboto/Roboto-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Roboto"; src: url("/static/webfonts/roboto/Roboto-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Roboto"; src: url("/static/webfonts/roboto/Roboto-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "Roboto"; src: url("/static/webfonts/roboto/Roboto-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "Roboto Black"; src: url("/static/webfonts/roboto/Roboto-Black.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Roboto Black"; src: url("/static/webfonts/roboto/Roboto-BlackItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "RobotoSlab Light"; src: url("/static/webfonts/RobotoSlab-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "RobotoSlab"; src: url("/static/webfonts/RobotoSlab-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "RobotoSlab"; src: url("/static/webfonts/RobotoSlab-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "RobotoSlab Black"; src: url("/static/webfonts/RobotoSlab-Black.ttf"); font-weight: normal; font-style: normal; }
+
+    @font-face { font-family: "Rubik Light"; src: url("/static/webfonts/rubik/Rubik-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Rubik Light"; src: url("/static/webfonts/rubik/Rubik-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Rubik"; src: url("/static/webfonts/rubik/Rubik-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Rubik"; src: url("/static/webfonts/rubik/Rubik-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "Rubik"; src: url("/static/webfonts/rubik/Rubik-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "Rubik"; src: url("/static/webfonts/rubik/Rubik-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "Rubik Black"; src: url("/static/webfonts/rubik/Rubik-Black.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "Rubik Black"; src: url("/static/webfonts/rubik/Rubik-BlackItalic.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "SourceSansPro Light"; src: url("/static/webfonts/sourcesanspro/SourceSansPro-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "SourceSansPro Light"; src: url("/static/webfonts/sourcesanspro/SourceSansPro-LightItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "SourceSansPro"; src: url("/static/webfonts/sourcesanspro/SourceSansPro-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "SourceSansPro"; src: url("/static/webfonts/sourcesanspro/SourceSansPro-Italic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "SourceSansPro"; src: url("/static/webfonts/sourcesanspro/SourceSansPro-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "SourceSansPro"; src: url("/static/webfonts/sourcesanspro/SourceSansPro-BoldItalic.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "SourceSansPro Black"; src: url("/static/webfonts/sourcesanspro/SourceSansPro-Black.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "SourceSansPro Black"; src: url("/static/webfonts/sourcesanspro/SourceSansPro-BlackItalic.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "SourceSansPro SemiBold"; src: url("/static/webfonts/sourcesanspro/SourceSansPro-SemiBold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "SourceSansPro SemiBold"; src: url("/static/webfonts/sourcesanspro/SourceSansPro-SemiBoldItalic.ttf"); font-weight: normal; font-style: italic; }
+
+    @font-face { font-family: "SourceSerifPro Light"; src: url("/static/webfonts/sourceserifpro/TTF/SourceSerifPro-Light.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "SourceSerifPro Light"; src: url("/static/webfonts/sourceserifpro/TTF/SourceSerifPro-LightIt.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "SourceSerifPro"; src: url("/static/webfonts/sourceserifpro/TTF/SourceSerifPro-Regular.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "SourceSerifPro"; src: url("/static/webfonts/sourceserifpro/TTF/SourceSerifPro-It.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "SourceSerifPro"; src: url("/static/webfonts/sourceserifpro/TTF/SourceSerifPro-Bold.ttf"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "SourceSerifPro"; src: url("/static/webfonts/sourceserifpro/TTF/SourceSerifPro-BoldIt.ttf"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "SourceSerifPro Black"; src: url("/static/webfonts/sourceserifpro/TTF/SourceSerifPro-Black.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "SourceSerifPro Black"; src: url("/static/webfonts/sourceserifpro/TTF/SourceSerifPro-BlackIt.ttf"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "SourceSerifPro Semibold"; src: url("/static/webfonts/sourceserifpro/TTF/SourceSerifPro-Semibold.ttf"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "SourceSerifPro Semibold"; src: url("/static/webfonts/sourceserifpro/TTF/SourceSerifPro-SemiboldIt.ttf"); font-weight: normal; font-style: italic; }
+
+
+    @font-face { font-family: "WorkSans Light"; src: url("/static/webfonts/worksans/WOFF/WorkSans-Light.woff"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "WorkSans Light"; src: url("/static/webfonts/worksans/WOFF/WorkSans-LightItalic.woff"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "WorkSans"; src: url("/static/webfonts/worksans/WOFF/WorkSans-Regular.woff"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "WorkSans"; src: url("/static/webfonts/worksans/WOFF/WorkSans-Italic.woff"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "WorkSans"; src: url("/static/webfonts/worksans/WOFF/WorkSans-Bold.woff"); font-weight: bold; font-style: normal; }
+    @font-face { font-family: "WorkSans"; src: url("/static/webfonts/worksans/WOFF/WorkSans-BoldItalic.woff"); font-weight: bold; font-style: italic; }
+    @font-face { font-family: "WorkSans Black"; src: url("/static/webfonts/worksans/WOFF/WorkSans-Black.woff"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "WorkSans Black"; src: url("/static/webfonts/worksans/WOFF/WorkSans-BlackItalic.woff"); font-weight: normal; font-style: italic; }
+    @font-face { font-family: "WorkSans SemiBold"; src: url("/static/webfonts/worksans/WOFF/WorkSans-SemiBold.woff"); font-weight: normal; font-style: normal; }
+    @font-face { font-family: "WorkSans SemiBold"; src: url("/static/webfonts/worksans/WOFF/WorkSans-SemiBoldItalic.woff"); font-weight: normal; font-style: italic; }

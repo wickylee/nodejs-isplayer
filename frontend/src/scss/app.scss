@@ -1,0 +1,855 @@
+@import "~normalize.css";
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+@import "~@blueprintjs/datetime/lib/css/blueprint-datetime.css";
+@import '~Video.js/dist/Video-js.css';
+@import "colors";
+@import "mixins";
+/* @import "variables"; */
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1em;
+}
+
+//set scrollbar style
+.section-container::-webkit-scrollbar-track {
+  @include scrollbar-track;
+  // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+  // border-radius: 4px;
+  // background-color: rgba(245, 245, 245, 0.541);
+}
+
+.section-container::-webkit-scrollbar {
+  @include scrollbar;
+  // width: 10px;
+  // background-color: rgba(245, 245, 245, 0.541);
+}
+
+.section-container::-webkit-scrollbar-thumb {
+  @include scrollbar-thumb;
+  // border-radius: 4px;
+  // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  // background-color: rgb(74, 97, 107);
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.pos-absolute {
+  position: absolute;
+}
+
+//end scrollbar style
+
+//blueprint overwrite
+* button span {
+  pointer-events: none;
+}
+
+.bp3-html-select {
+  & select {
+    background-color: #8a9ba8;
+    font: 0.9em sans-serif;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0)
+    );
+  }
+}
+
+.bp3-numeric-input {
+  & .bp3-vertical {
+    & .bp3-button {
+      height: 15px;
+      background-color: #8a9ba8;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0)
+      );
+    }
+  }
+}
+
+.bp3-portal{
+  font-family: -apple-system, "BlinkMacSystemFont", Arial, Helvetica,
+    "Microsoft JhengHei", "微軟正黑體", "Microsoft YaHei", "微软雅黑",
+    "Heiti TC", sans-serif, "Icons16";
+}
+//end blueprint overwrite
+
+//User interface fonts
+//on windows
+//"Microsoft JhengHei Regular", "Microsoft JhengHei Bold", "Microsoft JhengHei Light", "微軟正黑體"
+//"Microsoft YaHei", "微软雅黑",  "SimHei", "黑体"
+//on Mac
+//"Heiti TC", "STHeiti", "STXihei", "华文细黑",
+.app-root {
+  font-family: -apple-system, "BlinkMacSystemFont", Arial, Helvetica,
+    "Microsoft JhengHei", "微軟正黑體", "Microsoft YaHei", "微软雅黑",
+    "Heiti TC", sans-serif, "Icons16";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+//entry-frame
+.entry-frame {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/static/uiimage/entry-background-b.jpg");
+  background-size: 100% 100%;
+
+  & .entry-block {
+    margin: auto;
+  }
+
+  & .entry-toplogo-bar {
+    border-radius: 5px 5px 0px 0px;
+
+    background-color: $dark-gray1;
+    opacity: 0.9;
+    padding: 4px;
+    vertical-align: middle;
+    text-align: center;
+
+    border: 1px solid #1f3a51;
+    margin-bottom: 4px;
+
+    & .applogo {
+      margin-top: 4px;
+      width: 64px;
+      height: 50px;
+      box-shadow: 0px 0px 6px black;
+    }
+  }
+
+  & .login-block {
+    border-radius: 0px 0px 5px 5px;
+    background-color: rgba(24, 32, 38, 0.7);
+    padding: 4px;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #114c5f;
+  }
+
+  & .entry-footer {
+    margin-top: 50px;
+    color: $gray2;
+    text-align: center;
+    text-shadow: 3px 3px 1px $black;
+
+    & a::before,
+    & a::after {
+      content: "";
+      margin-right: 10px;
+    }
+
+    & a,
+    & a:active {
+      color: firebrick;
+    }
+  }
+}
+//end entryFrame
+
+//login-form
+.login-form {
+  margin: auto;
+
+  & .login-text {
+    font-size: 1.4rem;
+    color: $mid-gray10;
+  }
+
+  & .bp3-input-group {
+    margin: 10px 50px;
+    width: 170px;
+  }
+
+  & .verifyCode {
+    border-radius: 5px;
+    border: 1px solid #114c5f;
+    box-shadow: 0px 0px 6px rgba(252, 255, 250, 0.5);
+    //opacity: 0.8;
+  }
+
+  & .verifyCodeInput {
+    text-align: center;
+    width: 140px;
+    //opacity: 0.9;
+    font-size: 1.1em;
+    box-shadow: 0px 0px 6px rgba(252, 255, 250, 0.5);
+  }
+
+  & .loginbutton-group {
+    border-top: 1px solid #114c5f;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+
+    & button {
+      width: 170px;
+      @include margin-center;
+    }
+  }
+
+  & .login-error{
+    @include ly-flex-sole;
+    color: $red4;
+    font-size: 0.9em;
+  }
+
+
+  & .forgot-password-control{
+    margin-bottom: 10px;
+
+    @include basic-button-text;
+  }
+
+}
+//end login-form
+
+//app-ui-theme
+.app-ui-theme {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/static/uiimage/dark_concept.jpg");
+  background-size: 100% 100%;
+
+  & .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: auto;
+    border-bottom: 1px solid $dark-gray4;
+
+    & .bp3-navbar-heading{
+      margin: 0px 10px 0px 5px;
+      & .islogo {
+        margin-top: 4px;
+        width: 48px;
+        height: 36px;
+      }
+    }
+
+    & .bp3-navbar {
+      padding: 0px 5px;
+      height: 38px;
+      background-color: $dark-gray5;
+      & .bp3-minimal {
+        color: $mid-gray6;
+        border-radius: 0px;
+        &:hover{
+          background-color: $dark-gray3;
+        }
+      }
+
+    }
+
+    & .navbar-divider {
+      margin: 2px;
+      border-left: 1px solid $mid-gray10;
+    }
+
+    & .bp3-navbar-group {
+      height: 38px;
+    }
+
+    & .appLink, .rightside-button {
+      & a {
+        font-size: 1.1em;
+        color: $mid-gray6;
+      }
+
+      & .bp3-icon {
+        color: $mid-gray6;
+      }
+
+      &:hover .bp3-icon {
+        color: $white;
+      }
+
+      &:hover a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+
+    & .activeMenuItem {
+      position: relative;
+      font-weight: bold;
+      color: $white;
+      @include wui-text-shadow;
+
+      & .bp3-icon {
+        color: $white;
+        @include wui-text-shadow;
+      }
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        left: 0px;
+        bottom: -5px;
+        background-color: chocolate;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  & .app-bp3-minimal {
+    opacity: 0.7;
+
+    & .bp3-icon {
+      color: $forest4;
+    }
+
+    &:hover {
+      background-color: $black;
+      & .bp3-icon {
+        color: $white;
+      }
+    }
+  }
+}
+
+.frontend-loading{
+  width: 100%;
+  height: 100%;
+  @include ly-flex-sole;
+
+
+  & .lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  & .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  & .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff;
+    margin: -4px 0 0 -4px;
+  }
+  & .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  & .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  & .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  & .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  & .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  & .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  & .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  & .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  & .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  & .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  & .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  & .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  & .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  & .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  & .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  & .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+
+}
+
+@keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+//end app-ui-theme
+
+//common interface elements
+.cie-section-block {
+  width: 100%;
+  height: auto;
+
+  & .block-header {
+    @include ly-flex-sole(row, space-between, center);
+    padding: 5px 10px;
+    color: $block-header-color;
+    background-color: $header-color;
+    border-bottom: 1px solid $dark-gray1;
+
+    & .header-name {
+      @include ly-flex-sole(row, flex-start, center);
+      & .header-txt {
+        font-size: 1.1em;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  & .block-body {
+    padding: 5px 5px 20px 5px;
+    background: $depth-gray10;
+  }
+}
+
+.cie-content-card {
+  margin: 0px 20px 10px 30px;
+  border-radius: 0px 0px 6px 6px;
+
+  & .card-header {
+    @include ly-flex-sole(row, space-between, center);
+
+    border: 1px solid rgba($card-header-color, 0.7);
+    border-bottom: 2px solid rgba($card-header-color, 1);
+    width: 100%;
+    padding: 5px 10px;
+    background-color: rgba($card-header-color, 0.9);
+
+    & .header-txt {
+      @include wui-header-txt;
+      & span {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.card-header,
+.block-header {
+  & .bp3-button {
+    background-color: #8a9ba8;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0)
+    );
+
+    & .bp3-icon {
+      color: rgb(31, 45, 54);
+    }
+
+    &:hover {
+      background-color: #a9b7c2;
+    }
+  }
+}
+
+.action-buttons {
+  @include wui-bp3-button;
+}
+
+.ces-datatable {
+  background-color: rgba(190, 200, 220, 0.4);
+  width: 100%;
+  border-spacing: 0px;
+
+  & thead tr {
+    background-color: $mid-gray12;
+    color: $mid-gray3;
+  }
+
+  & th {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  & th,
+  tbody td {
+    font-weight: normal;
+    padding: 4px 8px;
+    text-align: left;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.8em;
+  }
+
+  & th:last-child {
+    text-align: center;
+  }
+
+  & th:first-child,
+  td:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  & td {
+    color: rgb(31, 39, 51);
+    font-size: 0.8em;
+    padding: 4px 8px;
+
+    & .action-buttons {
+      @include ly-flex-sole(row, space-around, center);
+    }
+  }
+
+  & tr {
+    background-color: rgb(171, 180, 194);
+  }
+
+  & tr:nth-child(even) {
+    background-color: rgb(161, 168, 182);
+  }
+}
+
+.ces-topinset-shadow {
+  box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.ces-datatable-footer {
+  padding: 5px;
+  font-size: 0.8em;
+  width: 100%;
+  @include ly-flex-sole(row, space-between, center);
+  background-color: $mid-gray11;
+  color: $mid-gray1;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba($gray2, 0.5);
+  border-radius: 0px 0px 6px 6px;
+}
+
+.cie-content-block {
+  & .block-title {
+    border-top: 1px solid rgb(67, 86, 122);
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(33, 45, 68);
+    font-weight: bold;
+    font-size: 1em;
+    color: $gray5;
+  }
+}
+
+.cie-fragment-header {
+  @include ly-flex-sole(row, space-between, center);
+  width: 100%;
+  font-weight: bold;
+  padding: 10px 10px 5px 10px;
+  background-color: rgba($fragment-header, 0.7);
+  margin-bottom: 1px;
+  font-size: 1em;
+  color: $gray5;
+}
+
+.cie-detail-block {
+  & .detail-row {
+    display: flex;
+    margin-bottom: 1px;
+    font-size: 1em;
+
+    & .fragment-header {
+      @include inblock-fragment-header;
+    }
+
+    & .field-label {
+      width: 25%;
+      padding: 10px 5px 10px 10px;
+      background-color: rgba($white, 0.2);
+      &::after {
+        content: " : ";
+      }
+    }
+
+    & .field-text {
+      width: 75%;
+      padding: 10px 5px 10px 5px;
+      background-color: rgba($white, 0.25);
+
+      & .bp3-input,
+      .bp3-select {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      & .bp3-timepicker-input-row {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      & .check-button-label {
+        margin-left: 10px;
+      }
+
+      & .bp3-numeric-input{
+        height: 30px;
+      }
+      //   & .bp3-control-group {
+      //     & .bp3-fixed {
+      //       & .bp3-button {
+      //         height: 15px;
+      //         background-color: #8a9ba8;
+      //         background-image: linear-gradient(
+      //           to bottom,
+      //           rgba(255, 255, 255, 0.3),
+      //           rgba(255, 255, 255, 0)
+      //         );
+
+      //         & .bp3-icon{
+      //           color: rgb(100, 100, 100);
+      //         }
+      //       }
+      //     }
+      // }
+
+      // }
+
+
+    }
+  }
+}
+
+.detail-button-row {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid $dark-gray5;
+  display: flex;
+
+  & .button-padding {
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 25%;
+    padding: 10px 5px 10px 5px;
+  }
+
+  & .detail-buttons {
+    display: flex;
+    width: 75%;
+    padding: 10px 5px 10px 5px;
+
+    @include wui-bp3-button;
+  }
+}
+
+//Common html element style
+.ces-form {
+  border-radius: 0px 0px 8px 8px;
+  overflow: hidden;
+
+  & .form-header {
+    border-top: 1px solid rgb(44, 68, 114);
+    @include ly-flex-sole(row, space-between, center);
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(33, 45, 68);
+
+    & .header-title {
+      font-weight: bold;
+      font-size: 1em;
+      color: $gray5;
+    }
+  }
+
+  & .form-body {
+    border: 1px solid rgb(117, 138, 143);
+    background-color: rgb(120, 127, 129);
+
+    & .field-row,
+    .span-row {
+      @include ly-flex-sole(row, flex-start, stretch);
+      border-bottom: 1px solid rgba($white, 0.2);
+      background-color: rgba($field-row-color, 0.5);
+      min-height: 20px;
+
+      & .fragment-header {
+        @include inblock-fragment-header;
+        background-color: rgba($fragment-header, 0.7);
+      }
+
+      & .sub-header {
+        @include inblock-fragment-header;
+        background-color: $gray1;
+      }
+
+      & .field-label,
+      .span-label {
+        font-size: 1em;
+        width: 25%;
+        padding: 10px;
+        color: #0f2027;
+        background-color: rgba($white, 0.1);
+      }
+
+      & .field-label::after {
+        content: " : ";
+      }
+
+      & .field-value {
+        width: 75%;
+        padding: 5px;
+
+        & .bp3-control{
+          margin: 5px 0px;
+        }
+
+        & .require_field{
+          background-color: $light-gray1;
+          border: 1px solid $red1;
+        }
+      }
+
+      @include wui-bp3-button;
+
+    }
+
+    & .button-row {
+      display: flex;
+      background-color: rgba($button-row-color, 0.5);
+
+      & .button-span {
+        width: 25%;
+        padding: 10px;
+        background-color: rgba($white, 0.1);
+      }
+
+      & .form-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 75%;
+        padding: 10px;
+
+        @include wui-bp3-button;
+
+      }
+    }
+
+    & .bp3-input {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.3);
+      color: rgb(33, 45, 68);
+    }
+
+    & .bp3-select {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 3px;
+      padding: 2px 5px;
+      color: rgb(33, 45, 68);
+    }
+
+    & .bp3-input:focus {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    & .bp3-input:disabled {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    & .bp3-timepicker-input-row {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    & .check-button-label {
+      margin-left: 10px;
+    }
+
+    & .bp3-numeric-input {
+      & .bp3-vertical {
+        & .bp3-button {
+          height: 15px;
+          background-color: #8a9ba8;
+          background-image: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.3),
+            rgba(255, 255, 255, 0)
+          );
+        }
+      }
+    }
+  }
+
+  & .form-request-msg{
+    color: $vermilion1;
+    font-size: 0.9em;
+
+    & .bp3-icon{
+      color:  $vermilion1;
+      margin-right: 5px;
+    }
+  }
+
+  & .action-completed-text{
+    color: #00515c;
+    font-size: 0.9em;
+    & .bp3-icon{
+      color: #00515c;
+      margin-right: 5px;
+    }
+  }
+}
+
+.lytry {
+  @include ly-flex-sole;
+  background-color: #4e555a;
+  height: 300px;
+  border: 1px solid rgb(47, 25, 9);
+
+  & .ly-item {
+    padding: 10px;
+    margin: 20px;
+    font-weight: bold;
+    color: #0f2027;
+    background-color: #a9b7c2;
+    border: 1px solid chocolate;
+  }
+}
+
+.alert-text{
+  height: 100%;
+  //@include ly-flex-sole(row, flex-start, center);
+}

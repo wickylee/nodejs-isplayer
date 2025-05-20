@@ -1,0 +1,85 @@
+.rollingdigitalclock-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  & .rollingdigitalclock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 0px solid #000000;
+    overflow: hidden;
+
+    & .clock-date {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: auto;
+      width: 100%;
+    }
+
+    & .clock-time {
+      display: flex;
+      position: relative;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      text-shadow: 2px 2px 4px #000000;
+
+      & .tick-hidden {
+        opacity: 0;
+      }
+
+      & .first,
+      .second {
+        display: flex;
+        flex-direction: column;
+      }
+
+      & .move {
+        animation: move linear 980ms infinite;
+      }
+
+      & .top-overlay {
+        width: 100%;
+        height: 20%;
+        background: linear-gradient(to top, transparent, #041e31);
+        position: absolute;
+        z-index: 2;
+        top: -2px;
+        left: 0px;
+      }
+
+      & .bottom-overlay {
+        width: 100%;
+        height: 20%;
+        background: linear-gradient(to bottom, transparent, #041e31);
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+      }
+    }
+
+    & .clock-time > div {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0vh);
+  }
+  to {
+    transform: translateY(-20vh);
+  }
+}

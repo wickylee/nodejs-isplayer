@@ -1,0 +1,353 @@
+/* @import "_colors"; */
+/* @import "_mixins"; */
+@import "~animate.css";
+
+.wedplayer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #797979;
+  overflow: hidden;
+  text-align: center;
+}
+ 
+.screen-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.display-root {
+  background-color: #000000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-framelayout {
+  overflow: hidden;
+
+  & .play-layout-clip {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    & .play-layoutblock {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+#cloneFrame {
+  z-index: 10;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.transit-frame {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.play-frame {
+  position: relative;
+  overflow: hidden;
+}
+
+.play-element {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+
+  & .play-scrollmsgs {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    & .scrolling-content {
+      flex-wrap: nowrap;
+      position: relative;
+      white-space: nowrap;
+      overflow: hidden;
+
+      & .msg-ticker{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & .ticker-space{
+          width: 150px;
+          min-width: 150px;
+          height: 20px;
+        }
+      }
+
+      & .msg-word {
+        position: absolute;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        white-space: nowrap;
+        & .span {
+          white-space: nowrap;
+        }
+      }
+    }
+
+  }
+}
+
+.play-image,
+.play-pdf,
+.play-websource,
+.play-video,
+.play-scrollmsgs {
+  padding: 0px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.play-iframe {
+  border-width: 0;
+}
+
+.play-animatetext {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.play-clock {
+  position: relative;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.play-weather {
+  padding: 0px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  
+  & .weather-current-piece {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & .weather-info{
+
+      & .temperature {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+      }
+
+      & .info-data{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: nowrap;
+
+        & div {
+          margin: 0px 4px;
+        }
+      }
+    }
+
+    & .weather-icon{
+      & .animateWeatherIcons{
+        position: relative;
+
+        & .animaIcon{
+          position: absolute;
+          top: 5px;
+          left: 5px;
+        }
+      }
+    }
+
+  }
+
+  & .weather-forecast-piece{
+    display: flex;
+    flex-direction: column;
+    justify-content:  space-between;
+    align-content: space-around;
+    align-items: center;
+
+    & .forecast-day{
+      font-weight: bold;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-color: #90909050;
+      padding: 2px;
+    }
+
+    & .forecast-conten{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+
+      & .weather-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        & div {
+          margin: 0px 2px;
+        }
+
+      }
+
+    }
+
+  }
+}
+
+.react-player {
+  background-color: #000000;
+}
+
+.content-msg {
+  font-size: 2em;
+  color: #838383;
+  font-weight: bold;
+}
+
+.anime-word, .anime-char {
+      display: inline-block;
+}
+
+.license-expired{
+  width: 100%;
+  height: 100%;
+  font-size: 4em;
+  color: #ffffff;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #546166, #2f3d42, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top,  #546166, #2f3d42, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-shadow: 2px 10px 10px #0F2027;
+}
+
+
+.composition-view, .itemshape-view,  .listblock-container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  & .static-element, .list-block, .item-boundfield {
+    color: black;
+    position: absolute;
+    padding: 0px;
+    text-align: initial;
+
+    & .element-active{
+      border: 1px dotted #2d4c82;
+      background-color: #669eff6a;
+    }
+
+    & .planing-listblock{
+
+      cursor: pointer;
+
+      &:hover{
+        border: 2px solid #DC2626;
+        filter:drop-shadow(8px 8px 10px gray);
+      }
+
+      & div{
+        pointer-events: none;
+      }
+    }
+
+    & .element-box {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      & .element-inside {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        /* align-content:center; */
+
+        & .mediasource {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+          background-repeat: no-repeat;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-content: center;
+          align-items: center;
+          flex-wrap: nowrap;
+        }
+
+        & .segments-txt, .boundfield-text{
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          height: auto; 
+          width: 100%;
+          cursor: pointer;
+        }
+
+      }
+
+      & .listblock-flex {
+        display: flex;
+        overflow: hidden;
+      }
+
+      & .element-highlight {
+        border: 2px solid #B91C1C;
+      }
+
+      & .empty-source {
+          background-color: #ffffffcc;
+      }
+
+    }
+  }
+}

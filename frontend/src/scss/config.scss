@@ -1,0 +1,170 @@
+@import "colors";
+@import "mixins";
+/* @import "variables"; */
+
+.player-config {
+  background-color: #3a3d3f;
+//   border: 1px solid #474242;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  @include ly-flex-sole(row, center, flex-start);
+}
+  //Common html element style
+.config-form {
+    width: 60%;
+    height: auto;
+    border-radius: 0px 0px 8px 8px;
+    overflow: hidden;
+
+    & .form-header {
+      border-top: 1px solid rgb(44, 68, 114);
+      @include ly-flex-sole(row, space-between, center);
+      width: 100%;
+      padding: 10px;
+      background-color: rgb(33, 45, 68);
+
+      & .header-title {
+        font-weight: bold;
+        font-size: 1em;
+        color: #bfccd6;
+      }
+    }
+
+    & .form-body {
+      border: 1px solid rgb(117, 138, 143);
+      background-color: rgb(120, 127, 129);
+
+      & .field-row,
+      .span-row {
+        @include ly-flex-sole(row, flex-start, stretch);
+        border-bottom: 1px solid rgba(#ffffff, 0.2);
+        background-color: rgba($field-row-color, 0.5);
+        min-height: 20px;
+
+        & .fragment-header {
+          @include inblock-fragment-header;
+          background-color: rgba($fragment-header, 0.7);
+        }
+
+        & .sub-header {
+          @include inblock-fragment-header;
+          background-color: $gray1;
+        }
+
+        & .field-label,
+        .span-label {
+          font-size: 1em;
+          width: 25%;
+          padding: 10px;
+          color: #0f2027;
+          background-color: rgba($white, 0.1);
+        }
+
+        & .field-label::after {
+          content: " : ";
+        }
+
+        & .field-value {
+          width: 75%;
+          padding: 5px;
+
+          & .bp3-control {
+            margin: 5px 0px;
+          }
+
+          & .require_field {
+            background-color: $light-gray1;
+            border: 1px solid $red1;
+          }
+        }
+
+        @include wui-bp3-button;
+      }
+
+      & .button-row {
+        display: flex;
+        background-color: rgba($button-row-color, 0.5);
+
+        & .button-span {
+          width: 25%;
+          padding: 10px;
+          background-color: rgba(#ffffff, 0.1);
+        }
+
+        & .form-buttons {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 75%;
+          padding: 10px;
+
+          @include wui-bp3-button;
+        }
+      }
+
+      & .bp3-input {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: rgb(33, 45, 68);
+      }
+
+      & .bp3-select {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+        padding: 2px 5px;
+        color: rgb(33, 45, 68);
+      }
+
+      & .bp3-input:focus {
+        background-color: rgba(255, 255, 255, 0.6);
+      }
+
+      & .bp3-input:disabled {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      & .bp3-timepicker-input-row {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      & .check-button-label {
+        margin-left: 10px;
+      }
+
+      & .bp3-numeric-input {
+        & .bp3-vertical {
+          & .bp3-button {
+            height: 15px;
+            background-color: #8a9ba8;
+            background-image: linear-gradient(
+              to bottom,
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0)
+            );
+          }
+        }
+      }
+    }
+
+    & .form-request-msg {
+      color: $vermilion1;
+      font-size: 0.9em;
+
+      & .bp3-icon {
+        color: $vermilion1;
+        margin-right: 5px;
+      }
+    }
+
+    & .action-completed-text {
+      color: #00515c;
+      font-size: 0.9em;
+      & .bp3-icon {
+        color: #00515c;
+        margin-right: 5px;
+      }
+    }
+  }
+

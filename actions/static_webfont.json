@@ -1,0 +1,386 @@
+[
+    { "font-family": "AlegreyaSans Light", "src": "/static/webfonts/alegreyasans/AlegreyaSans-Light.ttf"},
+    { "font-family": "AlegreyaSans Light", "src": "/static/webfonts/alegreyasans/AlegreyaSans-LightItalic.ttf"},
+    { "font-family": "AlegreyaSans ", "src": "/static/webfonts/alegreyasans/AlegreyaSans-Regular.ttf"},
+    { "font-family": "AlegreyaSans ", "src": "/static/webfonts/alegreyasans/AlegreyaSans-Italic.ttf"},
+    { "font-family": "AlegreyaSans ", "src": "/static/webfonts/alegreyasans/AlegreyaSans-Bold.ttf"},
+    { "font-family": "AlegreyaSans ", "src": "/static/webfonts/alegreyasans/AlegreyaSans-BoldItalic.ttf"},
+    { "font-family": "AlegreyaSans Medium", "src": "/static/webfonts/alegreyasans/AlegreyaSans-Medium.ttf"},
+    { "font-family": "AlegreyaSans Medium", "src": "/static/webfonts/alegreyasans/AlegreyaSans-MediumItalic.ttf"},
+    { "font-family": "AlegreyaSans Black", "src": "/static/webfonts/alegreyasans/AlegreyaSans-Black.ttf"},
+    { "font-family": "AlegreyaSans Black", "src": "/static/webfonts/alegreyasans/AlegreyaSans-BlackItalic.ttf"},
+   
+   
+    { "font-family": "BioRhyme Light", "src": "/static/webfonts/biorhyme/BioRhyme-Light.ttf"},
+    { "font-family": "BioRhyme", "src": "/static/webfonts/biorhyme/BioRhyme-Regular.ttf"},
+    { "font-family": "BioRhyme", "src": "/static/webfonts/biorhyme/BioRhyme-Bold.ttf"},
+   
+   
+    { "font-family": "Cairo Light", "src": "/static/webfonts/cairo/Cairo-Light.ttf"},
+    { "font-family": "Cairo", "src": "/static/webfonts/cairo/Cairo-Regular.ttf"},
+    { "font-family": "Cairo", "src": "/static/webfonts/cairo/Cairo-Bold.ttf"},
+    { "font-family": "Cairo Black", "src": "/static/webfonts/cairo/Cairo-Black.ttf"},
+    { "font-family": "Cairo SemiBold", "src": "/static/webfonts/cairo/Cairo-SemiBold.ttf"},
+   
+   
+    { "font-family": "Cardo", "src": "/static/webfonts/cardo/Cardo-Regular.ttf"},
+    { "font-family": "Cardo", "src": "/static/webfonts/cardo/Cardo-Italic.ttf"},
+    { "font-family": "Cardo", "src": "/static/webfonts/cardo/Cardo-Bold.ttf"},
+   
+   
+    { "font-family": "Chivo Light", "src": "/static/webfonts/chivo/Chivo-Light.ttf"},
+    { "font-family": "Chivo Light", "src": "/static/webfonts/chivo/Chivo-LightItalic.ttf"},
+    { "font-family": "Chivo", "src": "/static/webfonts/chivo/Chivo-Regular.ttf"},
+    { "font-family": "Chivo", "src": "/static/webfonts/chivo/Chivo-Italic.ttf"},
+    { "font-family": "Chivo", "src": "/static/webfonts/chivo/Chivo-Bold.ttf"},
+    { "font-family": "Chivo", "src": "/static/webfonts/chivo/Chivo-BoldItalic.ttf"},
+    { "font-family": "Chivo Black", "src": "/static/webfonts/chivo/Chivo-Black.ttf"},
+    { "font-family": "Chivo Black", "src": "/static/webfonts/chivo/Chivo-BlackItalic.ttf"},
+   
+   
+    { "font-family": "Cormorant Light", "src": "/static/webfonts/cormorant/cormorant/Cormorant-Light.ttf"},
+    { "font-family": "Cormorant Light", "src": "/static/webfonts/cormorant/cormorant/Cormorant-LightItalic.ttf"},
+    { "font-family": "Cormorant", "src": "/static/webfonts/cormorant/cormorant/Cormorant-Regular.ttf"},
+    { "font-family": "Cormorant", "src": "/static/webfonts/cormorant/cormorant/Cormorant-Italic.ttf"},
+    { "font-family": "Cormorant", "src": "/static/webfonts/cormorant/cormorant/Cormorant-Bold.ttf"},
+    { "font-family": "Cormorant", "src": "/static/webfonts/cormorant/cormorant/Cormorant-BoldItalic.ttf"},
+    { "font-family": "Cormorant SemiBold", "src": "/static/webfonts/cormorant/cormorant/Cormorant-SemiBold.ttf"},
+    { "font-family": "Cormorant SemiBold", "src": "/static/webfonts/cormorant/cormorant/Cormorant-SemiBoldItalic.ttf"},
+   
+   
+    { "font-family": "CormorantGaramond Light", "src": "/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-Light.ttf"},
+    { "font-family": "CormorantGaramond Light", "src": "/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-LightItalic.ttf"},
+    { "font-family": "CormorantGaramond", "src": "/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-Regular.ttf"},
+    { "font-family": "CormorantGaramond", "src": "/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-Italic.ttf"},
+    { "font-family": "CormorantGaramond", "src": "/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-Bold.ttf"},
+    { "font-family": "CormorantGaramond", "src": "/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-BoldItalic.ttf"},
+    { "font-family": "CormorantGaramond SemiBold", "src": "/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-SemiBold.ttf"},
+    { "font-family": "CormorantGaramond SemiBold-Italic", "src": "/static/webfonts/cormorant/cormorantgaramond/CormorantGaramond-SemiBoldItalic.ttf"},
+   
+   
+    { "font-family": "CormorantInfant Light", "src": "/static/webfonts/cormorant/cormorantinfant/CormorantInfant-Light.ttf"},
+    { "font-family": "CormorantInfant Light", "src": "/static/webfonts/cormorant/cormorantinfant/CormorantInfant-LightItalic.ttf"},
+    { "font-family": "CormorantInfant", "src": "/static/webfonts/cormorant/cormorantinfant/CormorantInfant-Regular.ttf"},
+    { "font-family": "CormorantInfant", "src": "/static/webfonts/cormorant/cormorantinfant/CormorantInfant-Italic.ttf"},
+    { "font-family": "CormorantInfant", "src": "/static/webfonts/cormorant/cormorantinfant/CormorantInfant-Bold.ttf"},
+    { "font-family": "CormorantInfant", "src": "/static/webfonts/cormorant/cormorantinfant/CormorantInfant-BoldItalic.ttf"},
+    { "font-family": "CormorantInfant SemiBold", "src": "/static/webfonts/cormorant/cormorantinfant/CormorantInfant-SemiBold.ttf"},
+    { "font-family": "CormorantInfant SemiBold-Italic", "src": "/static/webfonts/cormorant/cormorantinfant/CormorantInfant-SemiBoldItalic.ttf"},
+   
+   
+    { "font-family": "CormorantSC Light", "src": "/static/webfonts/cormorant/cormorantsc/CormorantSC-Light.ttf"},
+    { "font-family": "CormorantSC", "src": "/static/webfonts/cormorant/cormorantsc/CormorantSC-Regular.ttf"},
+    { "font-family": "CormorantSC", "src": "/static/webfonts/cormorant/cormorantsc/CormorantSC-Bold.ttf"},
+    { "font-family": "CormorantSC SemiBold", "src": "/static/webfonts/cormorant/cormorantsc/CormorantSC-SemiBold.ttf"},
+   
+   
+    { "font-family": "CormorantUpright", "src": "/static/webfonts/cormorant/cormorantupright/CormorantUpright-Regular.ttf"},
+    { "font-family": "CormorantUpright", "src": "/static/webfonts/cormorant/cormorantupright/CormorantUpright-Bold.ttf"},
+    { "font-family": "CormorantUpright SemiBold", "src": "/static/webfonts/cormorant/cormorantupright/CormorantUpright-SemiBold.ttf"},
+   
+   
+    { "font-family": "CrimsonText", "src": "/static/webfonts/crimsontext/CrimsonText-Regular.ttf"},
+    { "font-family": "CrimsonText", "src": "/static/webfonts/crimsontext/CrimsonText-Italic.ttf"},
+    { "font-family": "CrimsonText", "src": "/static/webfonts/crimsontext/CrimsonText-Bold.ttf"},
+    { "font-family": "CrimsonText", "src": "/static/webfonts/crimsontext/CrimsonText-BoldItalic.ttf"},
+    { "font-family": "CrimsonText SemiBold", "src": "/static/webfonts/crimsontext/CrimsonText-SemiBold.ttf"},
+    { "font-family": "CrimsonText SemiBold", "src": "/static/webfonts/crimsontext/CrimsonText-SemiBoldItalic.ttf"},
+   
+    { "font-family": "cwTeXFangSong zhonly", "src": "/static/webfonts/cwtex/cwTeXFangSong-zhonly.ttf"},
+    { "font-family": "cwTeXHei zhonly", "src": "/static/webfonts/cwtex/cwTeXHei-zhonly.ttf"},
+    { "font-family": "cwTeXKai zhonly", "src": "/static/webfonts/cwtex/cwTeXKai-zhonly.ttf"},
+    { "font-family": "cwTeXMing zhonly", "src": "/static/webfonts/cwtex/cwTeXMing-zhonly.ttf"},
+    { "font-family": "cwTeXYen zhonly", "src": "/static/webfonts/cwtex/cwTeXYen-zhonly.ttf"},
+   
+   
+    { "font-family": "FiraSans Light", "src": "/static/webfonts/firasans/firasans/FiraSans-Light.ttf"},
+    { "font-family": "FiraSans Light", "src": "/static/webfonts/firasans/firasans/FiraSans-LightItalic.ttf"},
+    { "font-family": "FiraSans", "src": "/static/webfonts/firasans/firasans/FiraSans-Regular.ttf"},
+    { "font-family": "FiraSans", "src": "/static/webfonts/firasans/firasans/FiraSans-Italic.ttf"},
+    { "font-family": "FiraSans", "src": "/static/webfonts/firasans/firasans/FiraSans-Bold.ttf"},
+    { "font-family": "FiraSans", "src": "/static/webfonts/firasans/firasans/FiraSans-BoldItalic.ttf"},
+    { "font-family": "FiraSans SemiBold", "src": "/static/webfonts/firasans/firasans/FiraSans-SemiBold.ttf"},
+    { "font-family": "FiraSans SemiBold", "src": "/static/webfonts/firasans/firasans/FiraSans-SemiBoldItalic.ttf"},
+    { "font-family": "FiraSans Black", "src": "/static/webfonts/firasans/firasans/FiraSans-Black.ttf"},
+    { "font-family": "FiraSans Black", "src": "/static/webfonts/firasans/firasans/FiraSans-BlackItalic.ttf"},
+   
+    { "font-family": "FiraSansCondensed Light", "src":  "/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-Light.ttf"},
+    { "font-family": "FiraSansCondensed Light", "src":  "/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-LightItalic.ttf" },
+    { "font-family": "FiraSansCondensed", "src":  "/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-Regular.ttf"},
+    { "font-family": "FiraSansCondensed", "src":  "/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-Italic.ttf" },
+    { "font-family": "FiraSansCondensed", "src":  "/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-Bold.ttf"},
+    { "font-family": "FiraSansCondensed", "src":  "/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-BoldItalic.ttf"},
+    { "font-family": "FiraSansCondensed Black", "src":  "/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-Black.ttf"},
+    { "font-family": "FiraSansCondensed Black", "src":  "/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-BlackItalic.ttf" },
+    { "font-family": "FiraSansCondensed SemiBold", "src":  "/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-SemiBold.ttf"},
+    { "font-family": "FiraSansCondensed SemiBold", "src":  "/static/webfonts/firasans/firasanscondensed/FiraSansCondensed-SemiBoldItalic.ttf" },
+
+    { "font-family": "FreeHK Kai 4700", "src": "/static/webfonts/free_hk/Free-HK-Kai_4700.ttf"},
+   
+    { "font-family": "IBMPlexSans Light", "src": "/static/webfonts/ibmplexsans/IBMPlexSans-Light.ttf"},
+    { "font-family": "IBMPlexSans Light", "src": "/static/webfonts/ibmplexsans/IBMPlexSans-LightItalic.ttf"},
+    { "font-family": "IBMPlexSans", "src": "/static/webfonts/ibmplexsans/IBMPlexSans-Regular.ttf"},
+    { "font-family": "IBMPlexSans", "src": "/static/webfonts/ibmplexsans/IBMPlexSans-Italic.ttf"},
+    { "font-family": "IBMPlexSans", "src": "/static/webfonts/ibmplexsans/IBMPlexSans-Bold.ttf"},
+    { "font-family": "IBMPlexSans", "src": "/static/webfonts/ibmplexsans/IBMPlexSans-BoldItalic.ttf"},
+    { "font-family": "IBMPlexSans SemiBold", "src": "/static/webfonts/ibmplexsans/IBMPlexSans-SemiBold.ttf"},
+    { "font-family": "IBMPlexSans SemiBold-Italic", "src": "/static/webfonts/ibmplexsans/IBMPlexSans-SemiBoldItalic.ttf"},
+   
+   
+    { "font-family": "Lato Light", "src": "/static/webfonts/lato/Lato-Light.ttf"},
+    { "font-family": "Lato Light", "src": "/static/webfonts/lato/Lato-LightItalic.ttf"},
+    { "font-family": "Lato", "src": "/static/webfonts/lato/Lato-Regular.ttf"},
+    { "font-family": "Lato", "src": "/static/webfonts/lato/Lato-Italic.ttf"},
+    { "font-family": "Lato", "src": "/static/webfonts/lato/Lato-Bold.ttf"},
+    { "font-family": "Lato", "src": "/static/webfonts/lato/Lato-BoldItalic.ttf"},
+    { "font-family": "Lato SemiBold", "src": "/static/webfonts/lato/Lato-SemiBold.ttf"},
+    { "font-family": "Lato SemiBold", "src": "/static/webfonts/lato/Lato-SemiBoldItalic.ttf"},
+    { "font-family": "Lato Black", "src": "/static/webfonts/lato/Lato-Black.ttf"},
+    { "font-family": "Lato Black", "src": "/static/webfonts/lato/Lato-BlackItalic.ttf"},
+   
+   
+    { "font-family": "LibreBaskerville", "src": "/static/webfonts/librebaskerville/LibreBaskerville-Regular.ttf"},
+    { "font-family": "LibreBaskerville", "src": "/static/webfonts/librebaskerville/LibreBaskerville-Italic.ttf"},
+    { "font-family": "LibreBaskerville", "src": "/static/webfonts/librebaskerville/LibreBaskerville-Bold.ttf"},
+   
+   
+    { "font-family": "Lora", "src": "/static/webfonts/lora/Lora-Regular.ttf"},
+    { "font-family": "Lora", "src": "/static/webfonts/lora/Lora-Italic.ttf"},
+    { "font-family": "Lora", "src": "/static/webfonts/lora/Lora-Bold.ttf"},
+    { "font-family": "Lora", "src": "/static/webfonts/lora/Lora-BoldItalic.ttf"},
+   
+   
+    { "font-family": "NotoSansCJKtc Thin", "src": "/static/webfonts/noto_asia/NotoSansCJKtc-Thin.otf"},
+    { "font-family": "NotoSansCJKtc Light", "src": "/static/webfonts/noto_asia/NotoSansCJKtc-Light.otf"},
+    { "font-family": "NotoSansCJKtc DemiLight", "src": "/static/webfonts/noto_asia/NotoSansCJKtc-DemiLight.otf"},
+    { "font-family": "NotoSansCJKtc Regular", "src": "/static/webfonts/noto_asia/NotoSansCJKtc-Regular.otf"},
+    { "font-family": "NotoSansCJKtc Medium", "src": "/static/webfonts/noto_asia/NotoSansCJKtc-Medium.otf"},
+    { "font-family": "NotoSansCJKtc Blod", "src": "/static/webfonts/noto_asia/NotoSansCJKtc-Bold.otf"},
+    { "font-family": "NotoSansCJKtc Black", "src": "/static/webfonts/noto_asia/NotoSansCJKtc-Black.otf"},
+   
+   
+    { "font-family": "NotoSansHK Thin.", "src": "/static/webfonts/noto_asia/NotoSansHK-Thin.otf"},
+    { "font-family": "NotoSansHK Light", "src": "/static/webfonts/noto_asia/NotoSansHK-Light.otf"},
+    { "font-family": "NotoSansHK Regular", "src": "/static/webfonts/noto_asia/NotoSansHK-Regular.otf"},
+    { "font-family": "NotoSansHK Blod", "src": "/static/webfonts/noto_asia/NotoSansHK-Bold.otf"},
+    { "font-family": "NotoSansHK Medium", "src": "/static/webfonts/noto_asia/NotoSansHK-Medium.otf"},
+    { "font-family": "NotoSansHK Black", "src": "/static/webfonts/noto_asia/NotoSansHK-Black.otf"},
+   
+    { "font-family": "NotoSansMonoCJKtc Regular", "src": "/static/webfonts/noto_asia/NotoSansMonoCJKtc-Regular.otf"},
+    { "font-family": "NotoSansMonoCJKtc Blod", "src": "/static/webfonts/noto_asia/NotoSansMonoCJKtc-Bold.otf"},
+   
+    { "font-family": "NotoSerifCJKtc Light", "src": "/static/webfonts/noto_asia/NotoSerifCJKtc-Light.otf"},
+    { "font-family": "NotoSerifCJKtc Regular", "src": "/static/webfonts/noto_asia/NotoSerifCJKtc-Regular.otf"},
+    { "font-family": "NotoSerifCJKtc Blod", "src": "/static/webfonts/noto_asia/NotoSerifCJKtc-Bold.otf"},
+    { "font-family": "NotoSerifCJKtc Medium", "src": "/static/webfonts/noto_asia/NotoSerifCJKtc-Medium.otf"},
+    { "font-family": "NotoSerifCJKtc Black", "src": "/static/webfonts/noto_asia/NotoSerifCJKtc-Black.otf"},
+    { "font-family": "NotoSerifCJKtc SemiBold", "src": "/static/webfonts/noto_asia/NotoSerifCJKtc-SemiBold.otf"},
+    { "font-family": "NotoSerifCJKtc ExtraLight", "src": "/static/webfonts/noto_asia/NotoSerifCJKtc-ExtraLight.otf"},
+   
+   
+    { "font-family": "NotoSans Light", "src": "/static/webfonts/notosans/NotoSans-Light.ttf"},
+    { "font-family": "NotoSans Light", "src": "/static/webfonts/notosans/NotoSans-LightItalic.ttf"},
+    { "font-family": "NotoSans", "src": "/static/webfonts/notosans/NotoSans-Regular.ttf"},
+    { "font-family": "NotoSans", "src": "/static/webfonts/notosans/NotoSans-Italic.ttf"},
+    { "font-family": "NotoSans", "src": "/static/webfonts/notosans/NotoSans-Bold.ttf"},
+    { "font-family": "NotoSans", "src": "/static/webfonts/notosans/NotoSans-BoldItalic.ttf"},
+    { "font-family": "NotoSans Black", "src": "/static/webfonts/notosans/NotoSans-Black.ttf"},
+    { "font-family": "NotoSans Black", "src": "/static/webfonts/notosans/NotoSans-BlackItalic.ttf"},
+    { "font-family": "NotoSans SemiBold", "src": "/static/webfonts/notosans/NotoSans-SemiBold.ttf"},
+    { "font-family": "NotoSans SemiBold", "src": "/static/webfonts/notosans/NotoSans-SemiBoldItalic.ttf"},
+   
+   
+    { "font-family": "NotoSans Condensed-Light", "src": "/static/webfonts/notosans/NotoSans-CondensedLight.ttf"},
+    { "font-family": "NotoSans Condensed-Light", "src": "/static/webfonts/notosans/NotoSans-CondensedLightItalic.ttf"},
+    { "font-family": "NotoSans Condensed", "src": "/static/webfonts/notosans/NotoSans-Condensed.ttf"},
+    { "font-family": "NotoSans Condensed", "src": "/static/webfonts/notosans/NotoSans-CondensedItalic.ttf"},
+    { "font-family": "NotoSans Condensed", "src": "/static/webfonts/notosans/NotoSans-CondensedBold.ttf"},
+    { "font-family": "NotoSans Condensed", "src": "/static/webfonts/notosans/NotoSans-CondensedBoldItalic.ttf"},
+    { "font-family": "NotoSans Condensed-Black", "src": "/static/webfonts/notosans/NotoSans-CondensedBlack.ttf"},
+    { "font-family": "NotoSans Condensed-Black", "src": "/static/webfonts/notosans/NotoSans-CondensedBlackItalic.ttf"},
+    { "font-family": "NotoSans Condensed-SemiBold", "src": "/static/webfonts/notosans/NotoSans-CondensedSemiBold.ttf"},
+    { "font-family": "NotoSans Condensed-SemiBold", "src": "/static/webfonts/notosans/NotoSans-CondensedSemiBoldItalic.ttf"},
+   
+   
+    { "font-family": "NotoSans SemiCondensed-Light", "src": "/static/webfonts/notosans/NotoSans-SemiCondensedLight.ttf"},
+    { "font-family": "NotoSans SemiCondensed-Light", "src": "/static/webfonts/notosans/NotoSans-SemiCondensedLightItalic.ttf"},
+    { "font-family": "NotoSans SemiCondensed", "src": "/static/webfonts/notosans/NotoSans-SemiCondensed.ttf"},
+    { "font-family": "NotoSans SemiCondensed", "src": "/static/webfonts/notosans/NotoSans-SemiCondensedItalic.ttf"},
+    { "font-family": "NotoSans SemiCondensed", "src": "/static/webfonts/notosans/NotoSans-SemiCondensedBold.ttf"},
+    { "font-family": "NotoSans SemiCondensed-Black", "src": "/static/webfonts/notosans/NotoSans-SemiCondensedBlack.ttf"},
+    { "font-family": "NotoSans SemiCondensed-Black", "src": "/static/webfonts/notosans/NotoSans-SemiCondensedBlackItalic.ttf"},
+    { "font-family": "NotoSans SemiCondensed-SemiBold", "src": "/static/webfonts/notosans/NotoSans-SemiCondensedSemiBold.ttf"},
+    { "font-family": "NotoSans SemiCondensed-SemiBold", "src": "/static/webfonts/notosans/NotoSans-SemiCondensedSemiBoldItalic.ttf"},
+   
+    { "font-family": "NotoSans ExtraCondensed-Light", "src": "/static/webfonts/notosans/NotoSans-ExtraCondensedLight.ttf"},
+    { "font-family": "NotoSans ExtraCondensed-Light", "src": "/static/webfonts/notosans/NotoSans-ExtraCondensedLightItalic.ttf"},
+    { "font-family": "NotoSans ExtraCondensed", "src": "/static/webfonts/notosans/NotoSans-ExtraCondensed.ttf"},
+    { "font-family": "NotoSans ExtraCondensed", "src": "/static/webfonts/notosans/NotoSans-ExtraCondensedItalic.ttf"},
+    { "font-family": "NotoSans ExtraCondensed", "src": "/static/webfonts/notosans/NotoSans-ExtraCondensedBold.ttf"},
+    { "font-family": "NotoSans ExtraCondensed", "src": "/static/webfonts/notosans/NotoSans-ExtraCondensedBoldItalic.ttf"},
+    { "font-family": "NotoSans ExtraCondensed-Black", "src": "/static/webfonts/notosans/NotoSans-ExtraCondensedBlack.ttf"},
+    { "font-family": "NotoSans ExtraCondensed-Black", "src": "/static/webfonts/notosans/NotoSans-ExtraCondensedBlackItalic.ttf"},
+    { "font-family": "NotoSans ExtraCondensed-SemiBold", "src": "/static/webfonts/notosans/NotoSans-ExtraCondensedSemiBold.ttf"},
+    { "font-family": "NotoSans ExtraCondensed-SemiBold", "src": "/static/webfonts/notosans/NotoSans-ExtraCondensedSemiBoldItalic.ttf"},
+   
+   
+    { "font-family": "NotoSerif Light", "src": "/static/webfonts/notoserif/NotoSerif-Light.ttf"},
+    { "font-family": "NotoSerif Light", "src": "/static/webfonts/notoserif/NotoSerif-LightItalic.ttf"},
+    { "font-family": "NotoSerif", "src": "/static/webfonts/notoserif/NotoSerif-Regular.ttf"},
+    { "font-family": "NotoSerif", "src": "/static/webfonts/notoserif/NotoSerif-Italic.ttf"},
+    { "font-family": "NotoSerif", "src": "/static/webfonts/notoserif/NotoSerif-Bold.ttf"},
+    { "font-family": "NotoSerif", "src": "/static/webfonts/notoserif/NotoSerif-BoldItalic.ttf"},
+    { "font-family": "NotoSerif Black", "src": "/static/webfonts/notoserif/NotoSerif-Black.ttf"},
+    { "font-family": "NotoSerif Black", "src": "/static/webfonts/notoserif/NotoSerif-BlackItalic.ttf"},
+    { "font-family": "NotoSerif SemiBold", "src": "/static/webfonts/notoserif/NotoSerif-SemiBold.ttf"},
+    { "font-family": "NotoSerif SemiBold", "src": "/static/webfonts/notoserif/NotoSerif-SemiBoldItalic.ttf"},
+   
+    { "font-family": "NotoSerif Condensed-Light", "src": "/static/webfonts/notoserif/NotoSerif-CondensedLight.ttf"},
+    { "font-family": "NotoSerif Condensed-Light", "src": "/static/webfonts/notoserif/NotoSerif-CondensedLightItalic.ttf"},
+    { "font-family": "NotoSerif Condensed", "src": "/static/webfonts/notoserif/NotoSerif-Condensed.ttf"},
+    { "font-family": "NotoSerif Condensed", "src": "/static/webfonts/notoserif/NotoSerif-CondensedItalic.ttf"},
+    { "font-family": "NotoSerif Condensed", "src": "/static/webfonts/notoserif/NotoSerif-CondensedBold.ttf"},
+    { "font-family": "NotoSerif Condensed", "src": "/static/webfonts/notoserif/NotoSerif-CondensedBoldItalic.ttf"},
+    { "font-family": "NotoSerif Condensed-SemiBold", "src": "/static/webfonts/notoserif/NotoSerif-CondensedSemiBold.ttf"},
+    { "font-family": "NotoSerif Condensed-SemiBold", "src": "/static/webfonts/notoserif/NotoSerif-CondensedSemiBoldItalic.ttf"},
+    { "font-family": "NotoSerif Condensed-Black", "src": "/static/webfonts/notoserif/NotoSerif-CondensedBlack.ttf"},
+    { "font-family": "NotoSerif Condensed-Black", "src": "/static/webfonts/notoserif/NotoSerif-CondensedBlackItalic.ttf"},
+   
+   
+    { "font-family": "NotoSerif SemiCondensed-Light", "src": "/static/webfonts/notoserif/NotoSerif-SemiCondensedLight.ttf"},
+    { "font-family": "NotoSerif SemiCondensed-Light", "src": "/static/webfonts/notoserif/NotoSerif-SemiCondensedLightItalic.ttf"},
+    { "font-family": "NotoSerif SemiCondensed", "src": "/static/webfonts/notoserif/NotoSerif-SemiCondensed.ttf"},
+    { "font-family": "NotoSerif SemiCondensed", "src": "/static/webfonts/notoserif/NotoSerif-SemiCondensedItalic.ttf"},
+    { "font-family": "NotoSerif SemiCondensed", "src": "/static/webfonts/notoserif/NotoSerif-SemiCondensedBold.ttf"},
+    { "font-family": "NotoSerif SemiCondensed", "src": "/static/webfonts/notoserif/NotoSerif-SemiCondensedBoldItalic.ttf"},
+    { "font-family": "NotoSerif SemiCondensed-Black", "src": "/static/webfonts/notoserif/NotoSerif-SemiCondensedBlack.ttf"},
+    { "font-family": "NotoSerif SemiCondensed-Black", "src": "/static/webfonts/notoserif/NotoSerif-SemiCondensedBlackItalic.ttf"},
+    { "font-family": "NotoSerif SemiCondensed-SemiBold", "src": "/static/webfonts/notoserif/NotoSerif-SemiCondensedSemiBold.ttf"},
+    { "font-family": "NotoSerif SemiCondensed-SemiBold", "src": "/static/webfonts/notoserif/NotoSerif-SemiCondensedSemiBoldItalic.ttf"},
+   
+   
+    { "font-family": "NotoSerif ExtraCondensed-Light", "src": "/static/webfonts/notoserif/NotoSerif-ExtraCondensedLight.ttf"},
+    { "font-family": "NotoSerif ExtraCondensed-Light", "src": "/static/webfonts/notoserif/NotoSerif-ExtraCondensedLightItalic.ttf"},
+    { "font-family": "NotoSerif ExtraCondensed", "src": "/static/webfonts/notoserif/NotoSerif-ExtraCondensed.ttf"},
+    { "font-family": "NotoSerif ExtraCondensed", "src": "/static/webfonts/notoserif/NotoSerif-ExtraCondensedItalic.ttf"},
+    { "font-family": "NotoSerif ExtraCondensed", "src": "/static/webfonts/notoserif/NotoSerif-ExtraCondensedBold.ttf"},
+    { "font-family": "NotoSerif ExtraCondensed", "src": "/static/webfonts/notoserif/NotoSerif-ExtraCondensedBoldItalic.ttf"},
+    { "font-family": "NotoSerif ExtraCondensed-Black", "src": "/static/webfonts/notoserif/NotoSerif-ExtraCondensedBlack.ttf"},
+    { "font-family": "NotoSerif ExtraCondensed-Black", "src": "/static/webfonts/notoserif/NotoSerif-ExtraCondensedBlackItalic.ttf"},
+    { "font-family": "NotoSerif ExtraCondensed-SemiBold", "src": "/static/webfonts/notoserif/NotoSerif-ExtraCondensedSemiBold.ttf"},
+    { "font-family": "NotoSerif ExtraCondensed-SemiBold", "src": "/static/webfonts/notoserif/NotoSerif-ExtraCondensedSemiBoldItalic.ttf"},
+   
+   
+    { "font-family": "OpenSans Light", "src": "/static/webfonts/opensans/OpenSans-Light.ttf"},
+    { "font-family": "OpenSans Light", "src": "/static/webfonts/opensans/OpenSans-LightItalic.ttf"},
+    { "font-family": "OpenSans", "src": "/static/webfonts/opensans/OpenSans-Regular.ttf"},
+    { "font-family": "OpenSans", "src": "/static/webfonts/opensans/OpenSans-Italic.ttf"},
+    { "font-family": "OpenSans", "src": "/static/webfonts/opensans/OpenSans-Bold.ttf"},
+    { "font-family": "OpenSans", "src": "/static/webfonts/opensans/OpenSans-BoldItalic.ttf"},
+    { "font-family": "OpenSans SemiBold", "src": "/static/webfonts/opensans/OpenSans-SemiBold.ttf"},
+    { "font-family": "OpenSans SemiBold", "src": "/static/webfonts/opensans/OpenSans-SemiBoldItalic.ttf"},
+   
+   
+    { "font-family": "Poppins Light", "src": "/static/webfonts/poppins/Poppins-Light.ttf"},
+    { "font-family": "Poppins Light", "src": "/static/webfonts/poppins/Poppins-LightItalic.ttf"},
+    { "font-family": "Poppins", "src": "/static/webfonts/poppins/Poppins-Regular.ttf"},
+    { "font-family": "Poppins", "src": "/static/webfonts/poppins/Poppins-Italic.ttf"},
+    { "font-family": "Poppins", "src": "/static/webfonts/poppins/Poppins-Bold.ttf"},
+    { "font-family": "Poppins", "src": "/static/webfonts/poppins/Poppins-BoldItalic.ttf"},
+    { "font-family": "Poppins Black", "src": "/static/webfonts/poppins/Poppins-Black.ttf"},
+    { "font-family": "Poppins Black", "src": "/static/webfonts/poppins/Poppins-BlackItalic.ttf"},
+    { "font-family": "Poppins SemiBold", "src": "/static/webfonts/poppins/Poppins-SemiBold.ttf"},
+    { "font-family": "Poppins SemiBold", "src": "/static/webfonts/poppins/Poppins-SemiBoldItalic.ttf"},
+   
+   
+    { "font-family": "ProzaLibre", "src": "/static/webfonts/prozalibre/ProzaLibre-Regular.ttf"},
+    { "font-family": "ProzaLibre", "src": "/static/webfonts/prozalibre/ProzaLibre-Italic.ttf"},
+    { "font-family": "ProzaLibre", "src": "/static/webfonts/prozalibre/ProzaLibre-Bold.ttf"},
+    { "font-family": "ProzaLibre", "src": "/static/webfonts/prozalibre/ProzaLibre-BoldItalic.ttf"},
+    { "font-family": "ProzaLibre SemiBold", "src": "/static/webfonts/prozalibre/ProzaLibre-SemiBold.ttf"},
+    { "font-family": "ProzaLibre SemiBold", "src": "/static/webfonts/prozalibre/ProzaLibre-SemiBoldItalic.ttf"},
+   
+   
+    { "font-family": "PT_Sans-Web", "src": "/static/webfonts/ptsans/PT_Sans-Web-Regular.ttf"},
+    { "font-family": "PT_Sans-Web", "src": "/static/webfonts/ptsans/PT_Sans-Web-Italic.ttf"},
+    { "font-family": "PT_Sans-Web", "src": "/static/webfonts/ptsans/PT_Sans-Web-Bold.ttf"},
+    { "font-family": "PT_Sans-Web", "src": "/static/webfonts/ptsans/PT_Sans-Web-BoldItalic.ttf"},
+   
+   
+    { "font-family": "PT_Serif-Web", "src": "/static/webfonts/ptserif/PT_Serif-Web-Regular.ttf"},
+    { "font-family": "PT_Serif-Web", "src": "/static/webfonts/ptserif/PT_Serif-Web-Italic.ttf"},
+    { "font-family": "PT_Serif-Web", "src": "/static/webfonts/ptserif/PT_Serif-Web-Bold.ttf"},
+    { "font-family": "PT_Serif-Web", "src": "/static/webfonts/ptserif/PT_Serif-Web-BoldItalic.ttf"},
+   
+   
+    { "font-family": "Raleway Light", "src": "/static/webfonts/raleway/Raleway-Light.ttf"},
+    { "font-family": "Raleway Light", "src": "/static/webfonts/raleway/Raleway-LightItalic.ttf"},
+    { "font-family": "Raleway", "src": "/static/webfonts/raleway/Raleway-Regular.ttf"},
+    { "font-family": "Raleway", "src": "/static/webfonts/raleway/Raleway-Italic.ttf"},
+    { "font-family": "Raleway", "src": "/static/webfonts/raleway/Raleway-Bold.ttf"},
+    { "font-family": "Raleway", "src": "/static/webfonts/raleway/Raleway-BoldItalic.ttf"},
+    { "font-family": "Raleway Black", "src": "/static/webfonts/raleway/Raleway-Black.ttf"},
+    { "font-family": "Raleway Black", "src": "/static/webfonts/raleway/Raleway-BlackItalic.ttf"},
+    { "font-family": "Raleway SemiBold", "src": "/static/webfonts/raleway/Raleway-SemiBold.ttf"},
+    { "font-family": "Raleway SemiBold", "src": "/static/webfonts/raleway/Raleway-SemiBoldItalic.ttf"},
+   
+   
+    { "font-family": "Roboto Light", "src": "/static/webfonts/roboto/Roboto-Light.ttf"},
+    { "font-family": "Roboto Light", "src": "/static/webfonts/roboto/Roboto-LightItalic.ttf"},
+    { "font-family": "Roboto", "src": "/static/webfonts/roboto/Roboto-Regular.ttf"},
+    { "font-family": "Roboto", "src": "/static/webfonts/roboto/Roboto-Italic.ttf"},
+    { "font-family": "Roboto", "src": "/static/webfonts/roboto/Roboto-Bold.ttf"},
+    { "font-family": "Roboto", "src": "/static/webfonts/roboto/Roboto-BoldItalic.ttf"},
+    { "font-family": "Roboto Black", "src": "/static/webfonts/roboto/Roboto-Black.ttf"},
+    { "font-family": "Roboto Black", "src": "/static/webfonts/roboto/Roboto-BlackItalic.ttf"},
+   
+   
+    { "font-family": "RobotoSlab Light", "src": "/static/webfonts/robotoslab/RobotoSlab-Light.ttf"},
+    { "font-family": "RobotoSlab", "src": "/static/webfonts/robotoslab/RobotoSlab-Regular.ttf"},
+    { "font-family": "RobotoSlab", "src": "/static/webfonts/robotoslab/RobotoSlab-Bold.ttf"},
+    { "font-family": "RobotoSlab Black", "src": "/static/webfonts/robotoslab/RobotoSlab-Black.ttf"},
+   
+    { "font-family": "Rubik Light", "src": "/static/webfonts/rubik/Rubik-Light.ttf"},
+    { "font-family": "Rubik Light", "src": "/static/webfonts/rubik/Rubik-LightItalic.ttf"},
+    { "font-family": "Rubik", "src": "/static/webfonts/rubik/Rubik-Regular.ttf"},
+    { "font-family": "Rubik", "src": "/static/webfonts/rubik/Rubik-Italic.ttf"},
+    { "font-family": "Rubik", "src": "/static/webfonts/rubik/Rubik-Bold.ttf"},
+    { "font-family": "Rubik", "src": "/static/webfonts/rubik/Rubik-BoldItalic.ttf"},
+    { "font-family": "Rubik Black", "src": "/static/webfonts/rubik/Rubik-Black.ttf"},
+    { "font-family": "Rubik Black", "src": "/static/webfonts/rubik/Rubik-BlackItalic.ttf"},
+   
+   
+    { "font-family": "SourceSansPro Light", "src": "/static/webfonts/sourcesanspro/SourceSansPro-Light.ttf"},
+    { "font-family": "SourceSansPro Light", "src": "/static/webfonts/sourcesanspro/SourceSansPro-LightItalic.ttf"},
+    { "font-family": "SourceSansPro", "src": "/static/webfonts/sourcesanspro/SourceSansPro-Regular.ttf"},
+    { "font-family": "SourceSansPro", "src": "/static/webfonts/sourcesanspro/SourceSansPro-Italic.ttf"},
+    { "font-family": "SourceSansPro", "src": "/static/webfonts/sourcesanspro/SourceSansPro-Bold.ttf"},
+    { "font-family": "SourceSansPro", "src": "/static/webfonts/sourcesanspro/SourceSansPro-BoldItalic.ttf"},
+    { "font-family": "SourceSansPro Black", "src": "/static/webfonts/sourcesanspro/SourceSansPro-Black.ttf"},
+    { "font-family": "SourceSansPro Black", "src": "/static/webfonts/sourcesanspro/SourceSansPro-BlackItalic.ttf"},
+    { "font-family": "SourceSansPro SemiBold", "src": "/static/webfonts/sourcesanspro/SourceSansPro-SemiBold.ttf"},
+    { "font-family": "SourceSansPro SemiBold", "src": "/static/webfonts/sourcesanspro/SourceSansPro-SemiBoldItalic.ttf"},
+   
+    { "font-family": "SourceSerifPro Light", "src": "/static/webfonts/sourceserifpro/TTF/SourceSerifPro-Light.ttf"},
+    { "font-family": "SourceSerifPro Light", "src": "/static/webfonts/sourceserifpro/TTF/SourceSerifPro-LightIt.ttf"},
+    { "font-family": "SourceSerifPro", "src": "/static/webfonts/sourceserifpro/TTF/SourceSerifPro-Regular.ttf"},
+    { "font-family": "SourceSerifPro", "src": "/static/webfonts/sourceserifpro/TTF/SourceSerifPro-It.ttf"},
+    { "font-family": "SourceSerifPro", "src": "/static/webfonts/sourceserifpro/TTF/SourceSerifPro-Bold.ttf"},
+    { "font-family": "SourceSerifPro", "src": "/static/webfonts/sourceserifpro/TTF/SourceSerifPro-BoldIt.ttf"},
+    { "font-family": "SourceSerifPro Black", "src": "/static/webfonts/sourceserifpro/TTF/SourceSerifPro-Black.ttf"},
+    { "font-family": "SourceSerifPro Black", "src": "/static/webfonts/sourceserifpro/TTF/SourceSerifPro-BlackIt.ttf"},
+    { "font-family": "SourceSerifPro Semibold", "src": "/static/webfonts/sourceserifpro/TTF/SourceSerifPro-Semibold.ttf"},
+    { "font-family": "SourceSerifPro Semibold", "src": "/static/webfonts/sourceserifpro/TTF/SourceSerifPro-SemiboldIt.ttf"},
+   
+    {"font-family": "WorkSans Light", "src": "/static/webfonts/worksans/WOFF/WorkSans-Light.woff"},
+    {"font-family": "WorkSans Light", "src": "/static/webfonts/worksans/WOFF/WorkSans-LightItalic.woff"},
+    {"font-family": "WorkSans", "src": "/static/webfonts/worksans/WOFF/WorkSans-Regular.woff"},
+    {"font-family": "WorkSans", "src": "/static/webfonts/worksans/WOFF/WorkSans-Italic.woff"},
+    {"font-family": "WorkSans", "src": "/static/webfonts/worksans/WOFF/WorkSans-Bold.woff"},
+    {"font-family": "WorkSans", "src": "/static/webfonts/worksans/WOFF/WorkSans-BoldItalic.woff"},
+    {"font-family": "WorkSans Black", "src": "/static/webfonts/worksans/WOFF/WorkSans-Black.woff"},
+    {"font-family": "WorkSans Black", "src": "/static/webfonts/worksans/WOFF/WorkSans-BlackItalic.woff"},
+    {"font-family": "WorkSans SemiBold", "src": "/static/webfonts/worksans/WOFF/WorkSans-SemiBold.woff"},
+    {"font-family": "WorkSans SemiBold", "src": "/static/webfonts/worksans/WOFF/WorkSans-SemiBoldItalic.woff"}
+]
+   

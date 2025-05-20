@@ -1,0 +1,236 @@
+/* @import "colors"; */
+
+
+//mixin for layout 
+@mixin margin-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+//layout for flex sole
+//$fd = row | row-reverse | column | column-reverse
+//$jc = justify-content: flex-start | flex-end | center | space-between | space-around
+//$ai = flex-start | flex-end | center | baseline | stretch
+@mixin ly-flex-sole($fd: row, $jc: center, $ai: center) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-content: $ai;
+  align-items: $ai;
+  flex-wrap: nowrap;
+}
+
+@mixin ly-flex-many ($fd: row, $jc: center, $ai: center) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  alignContent: $ai;
+  align-items: $ai;
+  flex-wrap: wrap;
+}
+
+@mixin wui-box-shadow{
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+@mixin wui-text-shadow{
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+@mixin wui-section-container{
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  padding: 10px 15px 50px 15px;
+  z-index: 2;
+  overflow: auto;
+  background-color: rgba($depth-gray10, 0.5);
+}
+
+@mixin intent-color($intentName) {
+  color: map-get($fe-intent-colors, $intentName);
+}
+
+@mixin position-all($position, $value) {
+  position: $position;
+  top: $value;
+  right: $value;
+  bottom: $value;
+  left: $value;
+}
+
+@mixin base-typography() {
+  text-transform: none;
+  line-height: $fe-line-height;
+  letter-spacing: 0;
+  font-size: $fe-font-size;
+  font-weight: 400;
+}
+
+@mixin running-typography() {
+  line-height: 1.5;
+  font-size: $fe-font-size;
+}
+
+@mixin heading-typography() {
+  color: $fe-heading-color;
+  font-weight: 600;
+
+  .#{$ns}-dark & {
+    color: $fe-dark-heading-color;
+  }
+}
+
+@mixin monospace-typography() {
+  text-transform: none;
+  font-family: $fe-font-family-monospace;
+}
+
+@mixin overflow-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+@mixin focus-outline($offset: 2px) {
+  outline: $fe-outline-color auto 2px;
+  outline-offset: $offset;
+  -moz-outline-radius: 6px;
+}
+
+@function border-shadow($alpha, $color: $black, $size: 1px) {
+  @return 0 0 0 $size rgba($color, $alpha);
+}
+
+//wui text style
+@mixin wui-header-txt{
+  color: $gray3;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+@mixin basic-button-text {
+  & .bp3-button {
+    //@include margin-center;
+    & .bp3-button-text{
+        color: $mid-gray6;
+        font-size: 0.8em;
+    }
+
+    & .bp3-icon{
+        color: $mid-gray6;
+    }
+
+    &:hover{
+      & .bp3-button-text{
+        color: $mid-gray1;
+      }
+
+      & .bp3-icon{
+        color: $mid-gray1;
+      }
+    }
+  }
+}
+
+@mixin wui-bp3-button {
+  & .bp3-intent-primary {
+    background-color: rgb(49, 73, 105);
+    color: rgba(255, 255, 255, 0.5);
+
+    &:hover {
+      background-color: rgb(50, 88, 138);
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  & .bp3-intent-danger {
+    background-color: rgb(85, 50, 50);
+    color: rgba(255, 255, 255, 0.5);
+
+    &:hover {
+      background-color: rgb(170, 63, 63);
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  & .bp3-button-none {
+    background-color: #8a9ba8;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0)
+    );
+
+    & .bp3-icon, .bp3-button-text {
+      color: black;
+    }
+
+    &:hover {
+      background-color: #a9b7c2;
+    }
+  }
+
+  & .enable-submit{
+    opacity: 1;
+    color: $lime5;
+  }
+
+  & .action-completed-text{
+      color: #00515c;
+      font-size: 0.9em;
+      & .bp3-icon{
+        color: #00515c;
+        margin-right: 5px;
+      }
+  }
+
+  
+}
+
+@mixin inblock-fragment-header {
+     @include ly-flex-sole(row, space-between, center);
+      width: 100%;
+      padding: 5px 10px;
+      color: $gray5; 
+      background-color: #202229a6;
+      border-top: 1px solid #20222985;
+      border-bottom: 1px solid #20222985;
+
+      @include wui-bp3-button;
+}
+
+@mixin  scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  background-color: rgba(245, 245, 245, 0.541);
+}
+
+@mixin  scrollbar {
+  width: 10px;
+  background-color: rgba(245, 245, 245, 0.541);
+}
+
+@mixin  scrollbar-thumb {
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(74, 97, 107);
+}
+
+
+@mixin modulesoruce-name-input {
+  & .modulesoruce-name-input {
+    & .bp3-input {
+      background-color: rgba(255, 255, 255, 0.5);
+      color: rgb(33, 45, 68);
+    }
+
+    & .bp3-input:focus {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}

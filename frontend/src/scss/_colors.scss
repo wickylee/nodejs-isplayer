@@ -1,0 +1,198 @@
+//$rootBgColor: rgb(255, 255, 255);
+
+$black: #10161a !default;
+$white: #ffffff !default;
+
+
+$sideFace-color: #5a7f9c60;
+$clip-cards-color: #20455f;
+$frame-cards-color: #274a50;
+$workSpace-color1: #394b59;
+$workSpace-color2: #465a69;
+// $elementPanel: #505c64;
+$elementHeader-color: #574057;
+$input-text-color:#294677;
+$focus-clip-color: #005462;
+
+$header-color: #213141;
+$block-header-color: #51b4ac;
+
+$card-header-color: #1a2936;
+$fragment-header: #294d8b;
+$field-row-color: #9db8db;
+$button-row-color: #8ba2c0;
+$datatable-footer: #3b455a;
+
+$depth-gray12: #3b4f5f;
+$depth-gray11: #394b59;
+$depth-gray10: #435869;
+$depth-gray9: #4d6578;
+$depth-gray8: #577288;
+$depth-gray7: #617f97;
+$depth-gray6: #6f8ca3;
+$depth-gray5: #7e98ad;
+$depth-gray4: #8ea5b7;
+$depth-gray3: #9db1c1;
+$depth-gray2: #adbeca;
+$depth-gray1: #bdcad4;
+
+$mid-gray12: #5c7080;
+$mid-gray11: #677d8f;
+$mid-gray10: #748a9b;
+$mid-gray9: #8396a6;
+$mid-gray8: #92a3b0;
+$mid-gray7: #a0afbb;
+$mid-gray6: #afbcc6;
+$mid-gray5: #bec8d0;
+$mid-gray4: #cdd5db;
+$mid-gray3: #dce1e6;
+$mid-gray2: #ebeef0;
+$mid-gray1: #f9fafb;
+
+// Core colors
+$dark-gray1: #182026 !default;
+$dark-gray2: #202b33 !default;
+$dark-gray3: #293742 !default;
+$dark-gray4: #30404d !default;
+$dark-gray5: #394b59 !default;
+
+$gray1: #5c7080 !default;
+$gray2: #738694 !default;
+$gray3: #8a9ba8 !default;
+$gray4: #a7b6c2 !default;
+$gray5: #bfccd6 !default;
+
+$light-gray1: #ced9e0 !default;
+$light-gray2: #d8e1e8 !default;
+$light-gray3: #e1e8ed !default;
+$light-gray4: #ebf1f5 !default;
+$light-gray5: #f5f8fa !default;
+
+$blue1: #0e5a8a !default;
+$blue2: #106ba3 !default;
+$blue3: #137cbd !default;
+$blue4: #2b95d6 !default;
+$blue5: #48aff0 !default;
+
+$green1: #0a6640 !default;
+$green2: #0d8050 !default;
+$green3: #0f9960 !default;
+$green4: #15b371 !default;
+$green5: #3dcc91 !default;
+
+$orange1: #a66321 !default;
+$orange2: #bf7326 !default;
+$orange3: #d9822b !default;
+$orange4: #f29d49 !default;
+$orange5: #ffb366 !default;
+
+$red1: #a82a2a !default;
+$red2: #c23030 !default;
+$red3: #db3737 !default;
+$red4: #f55656 !default;
+$red5: #ff7373 !default;
+
+// Extended colors
+
+$vermilion1: #9e2b0e !default;
+$vermilion2: #b83211 !default;
+$vermilion3: #d13913 !default;
+$vermilion4: #eb532d !default;
+$vermilion5: #ff6e4a !default;
+
+$rose1: #a82255 !default;
+$rose2: #c22762 !default;
+$rose3: #db2c6f !default;
+$rose4: #f5498b !default;
+$rose5: #ff66a1 !default;
+
+$violet1: #5c255c !default;
+$violet2: #752f75 !default;
+$violet3: #8f398f !default;
+$violet4: #a854a8 !default;
+$violet5: #c274c2 !default;
+
+$indigo1: #5642a6 !default;
+$indigo2: #634dbf !default;
+$indigo3: #7157d9 !default;
+$indigo4: #9179f2 !default;
+$indigo5: #ad99ff !default;
+
+$cobalt1: #1f4b99 !default;
+$cobalt2: #2458b3 !default;
+$cobalt3: #2965cc !default;
+$cobalt4: #4580e6 !default;
+$cobalt5: #669eff !default;
+
+$turquoise1: #008075 !default;
+$turquoise2: #00998c !default;
+$turquoise3: #00b3a4 !default;
+$turquoise4: #14ccbd !default;
+$turquoise5: #2ee6d6 !default;
+
+$forest1: #1d7324 !default;
+$forest2: #238c2c !default;
+$forest3: #29a634 !default;
+$forest4: #43bf4d !default;
+$forest5: #62d96b !default;
+
+$lime1: #728c23 !default;
+$lime2: #87a629 !default;
+$lime3: #9bbf30 !default;
+$lime4: #b6d94c !default;
+$lime5: #d1f26d !default;
+
+$gold1: #a67908 !default;
+$gold2: #bf8c0a !default;
+$gold3: #d99e0b !default;
+$gold4: #f2b824 !default;
+$gold5: #ffc940 !default;
+
+$sepia1: #63411e !default;
+$sepia2: #7d5125 !default;
+$sepia3: #96622d !default;
+$sepia4: #b07b46 !default;
+$sepia5: #c99765 !default;
+
+// color aliases
+
+$fe-intent-primary: $blue3 !default;
+$fe-intent-success: $green3 !default;
+$fe-intent-warning: $orange3 !default;
+$fe-intent-danger: $red3 !default;
+
+$fe-app-background-color: $light-gray5 !default;
+$fe-dark-app-background-color: $dark-gray3 !default;
+
+$fe-outline-color: rgba($blue3, 0.6);
+
+$fe-text-color: $dark-gray1 !default;
+$fe-text-color-muted: $gray1 !default;
+$fe-text-color-disabled: rgba($fe-text-color-muted, 0.6) !default;
+$fe-heading-color: $fe-text-color !default;
+$fe-link-color: $blue2 !default;
+$fe-dark-text-color: $light-gray5 !default;
+$fe-dark-text-color-muted: $gray4 !default;
+$fe-dark-text-color-disabled: rgba($fe-dark-text-color-muted, 0.6) !default;
+$fe-dark-heading-color: $fe-dark-text-color !default;
+$fe-dark-link-color: $blue5 !default;
+// Default text selection color using #7dbcff
+$fe-text-selection-color: rgba(125, 188, 255, 0.6) !default;
+
+$fe-icon-color: $fe-text-color-muted !default;
+$fe-icon-color-hover: $fe-text-color !default;
+$fe-icon-color-disabled: $fe-text-color-disabled !default;
+$fe-icon-color-selected: $fe-intent-primary !default;
+$fe-dark-icon-color: $fe-dark-text-color-muted !default;
+$fe-dark-icon-color-hover: $fe-dark-text-color !default;
+$fe-dark-icon-color-disabled: $fe-dark-text-color-disabled !default;
+$fe-dark-icon-color-selected: $fe-intent-primary !default;
+
+$fe-divider-black: rgba($black, 0.15) !default;
+$fe-dark-divider-black: rgba($black, 0.4) !default;
+$fe-dark-divider-white: rgba($white, 0.15) !default;
+
+$fe-code-text-color: $fe-text-color-muted !default;
+$fe-dark-code-text-color: $fe-dark-text-color-muted !default;
+$fe-code-background-color: rgba($white, 0.7) !default;
+$fe-dark-code-background-color: rgba($black, 0.3) !default;

@@ -1,0 +1,229 @@
+.analogclock-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  & .analogclock {
+    border-radius: 10%; /* enable change */
+    background-color: rgb(53, 47, 47); /* enable change */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000000; /* enable change */
+    -webkit-box-shadow: 4px 4px 19px 5px rgba(0, 0, 0, 0.55); /* enable change */
+    -moz-box-shadow: 4px 4px 19px 5px rgba(0, 0, 0, 0.55);
+    box-shadow: 4px 4px 19px 5px rgba(0, 0, 0, 0.55);
+
+    & .clock-face {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border-radius: 50%; /* enable change */
+      background-color: rgb(194, 186, 186); /* enable change */
+      border: 1px solid #000000; /* enable change */
+      height: 256px; /* enable change */
+      width: 256px; /* enable change */
+      padding: 5px; /* enable change */
+      -webkit-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.55); /* enable change */
+      -moz-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.55); /* enable change */
+      box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.55); /* enable change */
+
+      & .dialline-layer {
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+
+        & .diallines {
+          position: absolute;
+          left: 50%;
+          margin-left: -1px;
+          width: 2px; /* enable change */
+          height: 5px; /* enable change */
+          border-radius: 100%; /* enable change */
+          background: rgb(42, 42, 42); /* enable change */
+          transform-origin: 50% 130px;
+          box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3); /* enable change */
+        }
+
+        & .diallines:nth-of-type(5n) {
+          width: 3px;
+          height: 10px;
+          background: rgb(0, 0, 0);
+        }
+      }
+
+      & .numbers-layer {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 3;
+        & .hour-numbers {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          font-family: Arial, Helvetica, sans-serif;
+
+          & p {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+          }
+          & p:nth-child(1) {
+            right: 25%;
+            top: 7%;
+          }
+          & p:nth-child(2) {
+            right: 9%;
+            top: 24%;
+          }
+          & p:nth-child(3) {
+            right: 1%;
+            top: calc(50% - 10px);
+          }
+          & p:nth-child(4) {
+            right: 9%;
+            top: 69%;
+          }
+          & p:nth-child(5) {
+            right: 25%;
+            top: 83%;
+          }
+          & p:nth-child(6) {
+            right: calc(50% - 8px);
+            bottom: -2%;
+          }
+          & p:nth-child(7) {
+            left: 24%;
+            top: 83%;
+          }
+          & p:nth-child(8) {
+            left: 7%;
+            top: 68%;
+          }
+          & p:nth-child(9) {
+            left: 1%;
+            top: calc(50% - 10px);
+          }
+          & p:nth-child(10) {
+            left: 9%;
+            top: 24%;
+          }
+          & p:nth-child(11) {
+            left: 25%;
+            top: 7%;
+          }
+          & p:nth-child(12) {
+            right: calc(50% - 8px);
+            top: 1%;
+          }
+        }
+      }
+      & .date-info {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+
+        & .date-out,
+        .day-out {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: auto;
+          height: auto;
+          border-radius: 6px;
+          border: 0px solid #5d5b5b;
+        }
+      }
+
+      & .minutes-container,
+      .hours-container,
+      .seconds-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+      }
+
+      & .hours-container {
+        animation: rotate 43200s infinite linear;
+      }
+      & .minutes-container {
+        animation: rotate 3600s infinite steps(60);
+      }
+      & .seconds-container {
+        transition: transform 0.2s cubic-bezier(0.4, 2.08, 0.55, 0.44);
+      }
+
+      & .hours-hand {
+        background: #000000;
+        width: 2.5%;
+        left: 48.5%;
+        height: 28%;
+        top: 22%;
+        position: absolute;
+        transform-origin: 50% 100%;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+      }
+
+      & .minutes-hand {
+        background: #000000;
+        height: 36%;
+        left: 49%;
+        position: absolute;
+        top: 14%;
+        transform-origin: 50% 100%;
+        width: 2%;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+      }
+
+      & .seconds-hand {
+        background: red;
+        height: 50%;
+        left: calc(50% - 0.5%);
+        position: absolute;
+        top: 10%;
+        transform-origin: 50% 80%;
+        width: 1%;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+      }
+
+      & .center-dot {
+        background-color: rgb(34, 31, 31);
+        position: absolute;
+        left: calc(50% - 5px);
+        top: calc(50% - 5px);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border-width: 1px;
+        border-style: solid;
+        border-color: "#000000";
+        z-index: 20;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
