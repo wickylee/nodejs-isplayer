@@ -85,7 +85,7 @@ class PlayerConfig extends Component {
         if (targetPlayer === undefined) {
           this.setState({ iKeySearchMsg: "Not found any match player IKey!", _actionCompleted: false });
         } else {
-          this.setState({ name: targetPlayer.ikey, iKeySearchMsg: "", _actionCompleted: false });
+          this.setState({ name: targetPlayer.ikey, media_path: res.data.mediaPath, iKeySearchMsg: "", _actionCompleted: false,  });
         }  
       } else {
         this.setState({ iKeySearchMsg: "Not found player IKey as the target display not have any player!" });

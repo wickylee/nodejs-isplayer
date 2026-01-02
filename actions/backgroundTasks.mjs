@@ -105,8 +105,8 @@ async function checkdisplayupdate() {
 
 async function performNewContentMediaSourceDownload(thisPlayer) {
     let isCompleteMediaSourceDownload = false;
+    
     try {
-        
         let downloadMediaFiles = await produceMediaFileDownloadList(thisPlayer);
         // start downloading
         let downloadCount = 0;
@@ -125,8 +125,9 @@ async function performNewContentMediaSourceDownload(thisPlayer) {
         cusLogger.info(`${downloadCount} files starting download`);
         isCompleteMediaSourceDownload = true;
     } catch (error) {
-        cusLogger.error("Error exceuting: ", error);
+        cusLogger.error("Error exceuting at performNewContentMediaSourceDownload(): ", error);
     }
+    
     return isCompleteMediaSourceDownload;
 }
 

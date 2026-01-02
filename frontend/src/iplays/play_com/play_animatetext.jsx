@@ -26,7 +26,10 @@ class PlayAnimateText extends Component {
                             <div className="anime-char" key={index}>{char}</div>
                           ))}
                           </div>
-                          <div className="anime-word"><span>&nbsp;&nbsp;</span></div>
+                          {/* <div className="anime-word"><span>&nbsp;&nbsp;</span></div> */}
+                          {index < source.content.split(" ").length - 1 && (
+                            <div className="anime-word"><span>&nbsp;</span></div>
+                          )}
                           </Fragment>
                         )) }
                     </div>

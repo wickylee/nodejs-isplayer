@@ -8,13 +8,14 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export async function produceMediaFileDownloadList(playerModel) {
     let downloadList = []
+
     try {
         let displayContent = JSON.parse(playerModel.playcontent);
         let displayMediaFileList = getMediaFileOfDisplay(displayContent);
-        // cusLogger.info(displayMediaFileList)
         downloadList = findDownloadList(playerModel, displayMediaFileList);
+        //cusLogger.info(displayMediaFileList)
     } catch (error) {
-        cusLogger.error("Error exceuting: ", error);
+        cusLogger.error("Error exceuting: at produceMediaFileDownloadList()", error);
     }
     // cusLogger.info("downloadList", downloadList);
     return downloadList;
@@ -53,11 +54,19 @@ function getMediaFileOfDisplay(displayContent) {
          playlist.playclips.forEach(playclip => {
              playclip.clip.clipframes.forEach(clipframe =>  {
                  clipframe.frame.elements.forEach(element =>  {
-                     //he target of element is a MediaSource model
+                     //the target of element is a MediaSource model
                      if (element.mediasource != undefined) {
                          let mediaType = element.mediasource.media_type.value;
                          if (mediaSourceType.includes(mediaType)) {
                             mediaFileList.push(getMediasourcesStorePathfileName(element.mediasource.content));
+                            // if mediaType of target element is video
+                            /*
+                            if (mediaType === "video") {
+                                // handle video specific logic get the video file thumbnail image also
+                                let videoThumbnail = getVideoThumbnail(element.mediasource.content);
+                                mediaFileList.push(videoThumbnail);
+                            }*/
+                            //end
                          }
                      }
                      // the target of element is an FusionView model
@@ -76,12 +85,13 @@ function getMediaFileOfDisplay(displayContent) {
              clipframe.frame.elements.forEach(element =>  {
                  //the target of element is a MediaSource model
                  if ( element.mediasource != undefined ){
-                     mediaType = element.mediasource.media_type.value;
+                     console.log("downloadLoad:", element.mediasource);
+                     let mediaType = element.mediasource.media_type.value;
                      if (mediaSourceType.includes(mediaType)) {
                         mediaFileList.push(getMediasourcesStorePathfileName(element.mediasource.content));
                      }
                  }
-                 // the target of element is an FusionView model
+                 // the target of element is an FusionView models
                  if (element.fusionview != undefined ) {
                     let layoutBlockFusionviewInvolvedSourceFile = getFusionviewInvolvedSourceFile(element.fusionview);
                     mediaFileList = [...mediaFileList, ...layoutBlockFusionviewInvolvedSourceFile ];
@@ -167,3 +177,17 @@ function getMediaFileOfDisplay(displayContent) {
      return {"sourcePath": storePath, "fileName": file_name}
  }
  
+function getVideoThumbnail(videoFilePath) {
+    let thumbnailPath = videoFilePath.substring(0, videoFilePath.lastIndexOf("/"));
+    // create the thumbs folder if it doesn't exist
+    const thumbsFolder = path.join(thumbnailPath, "thumbs");
+    const publicFolder = path.join(__dirname, "../public");
+    const checkThumbsPath = path.join(publicFolder, thumbsFolder);
+    // console.log(`Checking for thumbnails at: ${checkThumbsPath}`);
+    if (!fs.existsSync(checkThumbsPath)) {
+        fs.mkdirSync(checkThumbsPath);
+    }
+    thumbnailPath = thumbnailPath + "/thumbs" + videoFilePath.substring(videoFilePath.lastIndexOf("/"), videoFilePath.length);
+    thumbnailPath = thumbnailPath.substring(0, thumbnailPath.lastIndexOf(".")) + ".jpg";
+    return {"sourcePath": path.dirname(thumbnailPath), "fileName": path.basename(thumbnailPath)};
+}
